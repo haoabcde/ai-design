@@ -1,6 +1,6 @@
-# 水岸江苏：内容依据与图片署名
+# 水岸江苏：内容依据与素材记录
 
-调研日期：2026-11-16。南京—扬州—苏州六日／五晚、每日节奏、二选一安排和住宿分配均为本示例的编辑建议，不是官方推荐线路或在售套餐。资料只覆盖三城精选，不代表江苏全省。未虚构门票、酒店、交通报价或接待服务。
+调研日期：2026-11-16。主题为南京—扬州—苏州六日／五晚旅行；每日节奏、二选一安排和住宿分配为编辑策划。下表保存采用的内容依据。
 
 ## 内容依据
 
@@ -18,11 +18,9 @@
 | 扬州早茶 | [我苏网／扬州晚报：2022早茶文化节现场报道](https://www.ourjiangsu.com/a/20220618/1655521286694.shtml)。采用三丁包、烫干丝等食物名称；不沿用活动或优惠。 |
 | 苏州风味 | [苏州市地方志：舌尖上的苏州](https://dfzb.suzhou.gov.cn/dfzb/szdq/202105/58960352b58742eebca59f30a2a94bba.shtml)、[苏州政府英文站：Delicacies](https://english.suzhou.gov.cn/szsenglish/szcuisine/202411/7485ed47cfad49848955e2e9f1a1f88d.shtml)。采用苏式面的浇头、汤水特点，不承诺餐厅价格或服务。 |
 
-开放安排、预约办法、票价和车次会变化。出发前查阅各场馆当日公告；手册不承诺预约成功，也未进行实地踏勘。
-
 ## 图片许可
 
-本目录的摄影作品分别采用下列许可，不适用仓库代码的 MIT 许可。下载的是 Commons 发布的缩小版本；原图不调色，HTML／PDF 中有等比裁切，包括圆形与窄长取景。摄影及其裁切展示保留各自原许可，不表示作者或场馆为本提案背书。
+本目录的摄影作品分别采用下列许可，不适用仓库代码的 MIT 许可。下载的是 Commons 发布的缩小版本；原图不调色，HTML／PDF 中有等比裁切，包括圆形与窄长取景。摄影及其裁切展示保留各自原许可。
 
 | 本地文件 | 原作、作者、许可 |
 |---|---|
@@ -30,9 +28,9 @@
 | `assets/nanjing-qinhuai.jpg` | [Confucius Temple and Qinhuai River, Nanjing Night.jpg](https://commons.wikimedia.org/wiki/File:Confucius_Temple_and_Qinhuai_River,_Nanjing_Night.jpg)，Dick Rochester，摄于2009-03-25，[CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)。1280×857。 |
 | `assets/yangzhou-lake.jpg` | [The Five-Pavilion Bridge.jpg](https://commons.wikimedia.org/wiki/File:The_Five-Pavilion_Bridge.jpg)，Jackiejackie123123，摄于2024-12-08，[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)。1280×853。 |
 
-图片属于资料摄影，不代表实时景观、季节、天气或客流。HTML、PDF 的图注含原作和许可链接，离线时可先阅读署名，联网后查看许可全文。
+原作、作者、拍摄日期、许可与裁切记录统一保存在这里。HTML／PDF 末页通过“素材信息”链接关联本记录，随 HTML 一起提供本文件；画面不再逐张重复摄影署名。
 
-另有 `assets/river-editorial.png`：2026-11-16 通过宿主内置 ImageGen 生成的概念插画，1055×1491。它以一条白色水线连接概念建筑，并非三座城市的实景、精确建筑图或地理地图。封面明确标注其角色；[完整提示词](design/river-art-prompt.md) 在生成前保存。未使用 CLI／API 回退，也没有在程序中重画或编辑插画。
+另有 `assets/river-editorial.png`：2026-11-16 通过宿主内置 ImageGen 生成的概念插画，1055×1491。它以一条白色水线连接城墙、亭桥与水乡建筑，作为主题插画使用；[完整提示词](design/river-art-prompt.md) 在生成前保存。未使用 CLI／API 回退，也没有在程序中重画或编辑插画。
 
 ## HTML 制作与审阅
 
@@ -40,6 +38,6 @@
 
 第二版以“水线串起三城”作为概念：钴蓝版画与大字构成封面，曲线组织三城的行程阶段，城市页按夜景、湖面与园林空间分别取景。保留14pt打印正文、20px桌面正文与18px手机正文，不靠小字为设计腾空间。文字仍是可选中、可修改的静态 HTML；无远程字体、框架或脚本加载依赖。
 
-[视觉方向对照](design/directions.html) 保存第一版与两个新方向，且同时展示两种方向的真实行程信息页。A“水线版画”由作者暂选并扩展全册；B“园窗取景”用巨型竖排汉字与窄长摄影对读，保留为方向探索。此选择不代表用户已认可，也不把一个样册当作 skill 具备普遍优秀审美的证明。
+[视觉方向对照](design/directions.html) 保存第一版与两个新方向，且同时展示两种方向的真实行程信息页。A“水线版画”由作者暂选并扩展全册；B“园窗取景”用巨型竖排汉字与窄长摄影对读，保留为方向探索。方向选择仍待用户反馈。
 
 前端设计方法参考 [Anthropic frontend-design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) 中按主题选择字体、结构表达信息和实际截图自评的做法；没有复制其代码，也没有把该项目的具体审美偏好变成通用规则。

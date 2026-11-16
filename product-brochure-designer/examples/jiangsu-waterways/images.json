@@ -7,7 +7,7 @@
       "status": "approved",
       "sourceType": "licensed",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Touring_the_Humble_Administrator%27s_Garden_10.jpg",
-      "rights": "Rose Abrams，CC BY 4.0。下载 Commons 发布的 1280px 版本；HTML 等比裁切展示，未调色。署名、原作与许可链接见 brochure.html 和 sources.md。",
+      "rights": "Rose Abrams，CC BY 4.0。下载 Commons 发布的 1280px 版本；HTML 等比裁切展示，未调色。署名、原作与许可链接集中保存在 sources.md，手册末页以素材信息入口关联。",
       "usage": "documentary",
       "width": 1280,
       "height": 960
@@ -19,7 +19,7 @@
       "status": "approved",
       "sourceType": "licensed",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Confucius_Temple_and_Qinhuai_River,_Nanjing_Night.jpg",
-      "rights": "Dick Rochester，CC BY-SA 2.0。下载 Commons 发布的 1280px 版本；HTML 等比裁切展示，未调色。摄影及其裁切展示沿用 CC BY-SA 2.0，见 brochure.html 和 sources.md。",
+      "rights": "Dick Rochester，CC BY-SA 2.0。下载 Commons 发布的 1280px 版本；HTML 等比裁切展示，未调色。摄影及其裁切展示沿用 CC BY-SA 2.0，原作与许可链接集中保存在 sources.md，手册末页以素材信息入口关联。",
       "usage": "documentary",
       "width": 1280,
       "height": 857
@@ -27,11 +27,11 @@
     {
       "id": "yangzhou-lake",
       "path": "assets/yangzhou-lake.jpg",
-      "role": "封面及扬州瘦西湖五亭桥摄影",
+      "role": "扬州瘦西湖五亭桥摄影",
       "status": "approved",
       "sourceType": "licensed",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Five-Pavilion_Bridge.jpg",
-      "rights": "Jackiejackie123123，CC BY-SA 4.0。下载 Commons 发布的 1280px 版本；HTML 等比裁切展示，未调色。摄影及其裁切展示沿用 CC BY-SA 4.0，见 brochure.html 和 sources.md。",
+      "rights": "Jackiejackie123123，CC BY-SA 4.0。下载 Commons 发布的 1280px 版本；HTML 等比裁切展示，未调色。摄影及其裁切展示沿用 CC BY-SA 4.0，原作与许可链接集中保存在 sources.md，手册末页以素材信息入口关联。",
       "usage": "documentary",
       "width": 1280,
       "height": 853

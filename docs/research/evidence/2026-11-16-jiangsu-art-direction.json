@@ -53,8 +53,8 @@
     },
     "pdf": {
       "pages": 6,
-      "sha256": "54127e15718e63248abf9a942cc79166ef76f99ba8d368753c178b563464438b",
-      "bytes": 4587045,
+      "sha256": "57d46c5af668d4bdf8af5c6ae7939370c4b3659e30b366c1aacfc20308869126",
+      "bytes": 4494157,
       "keyTextAndFooters": "pass"
     },
     "offlineFiles": {
@@ -78,5 +78,50 @@
     "No independent aesthetic benchmark or blind evaluation.",
     "No evidence of a general improvement guarantee across design tasks.",
     "The existing researched travel facts and licensing limits still apply."
-  ]
+  ],
+  "copyRefinement": {
+    "request": "Remove unrequested attributions and disclaimers from the design.",
+    "changes": [
+      "Removed cover AI notice, page-by-page photo credits, source lists and generic disclaimer paragraphs.",
+      "Kept useful itinerary and reservation guidance.",
+      "Centralized required photo attribution and licensing in sources.md, linked as materials information in the final footer.",
+      "Removed the default disclaimer placeholder from the HTML template and aligned skill guidance.",
+      "Refreshed both direction prototypes and comparison images. The V1 comparison image only removes its photo-credit line; the original remains at commit 4144e5f."
+    ],
+    "verification": {
+      "skillValidator": "pass",
+      "smokeChecks": 30,
+      "deliveryCheck": {
+        "pages": 6,
+        "imageFiles": 4,
+        "errors": 0,
+        "warnings": 0
+      },
+      "printBodyPt": 14,
+      "printOutsideElementsByPage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "mobile": {
+        "viewport": 375,
+        "documentWidth": 375,
+        "bodyPx": 18,
+        "imagesLoaded": true
+      },
+      "comparison": {
+        "viewport": 375,
+        "documentWidth": 375,
+        "imagesLoaded": true
+      },
+      "pdfPages": 6,
+      "removedTextAbsentInHtmlAndPdf": true,
+      "pdfMaterialsLinkPresent": true,
+      "localServerLinksInPdf": false,
+      "visualReview": "Viewed all six final PDF page renders, the updated comparison and mobile cover / practical page."
+    }
+  }
 }

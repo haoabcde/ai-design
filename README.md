@@ -121,4 +121,4 @@ product-brochure-designer/
 
 核心脚本需要 Node.js ≥20；生图与原生设计路线依赖宿主实际工具。Python PDF 合页、PPTX 与 YAML 支持均为可选。
 
-[MIT License](LICENSE)。江苏样册所用第三方摄影另按各自 CC 许可使用，见其图注与 [图片署名](product-brochure-designer/examples/jiangsu-waterways/sources.md)。
+[MIT License](LICENSE)。江苏样册所用第三方摄影另按各自 CC 许可使用，统一见 [素材记录](product-brochure-designer/examples/jiangsu-waterways/sources.md)。

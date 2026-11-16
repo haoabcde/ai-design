@@ -147,14 +147,13 @@
   .page-closing .closing-body { position: absolute; left: var(--margin); right: var(--margin); top: 20%; }
   .page-closing .closing-title { font-family: var(--font-title); font-size: 32pt; font-weight: 700; line-height: 1.35; max-width: 150mm; }
   .page-closing .contact { position: absolute; left: var(--margin); bottom: 52mm; font-size: 16pt; line-height: 1.7; }
-  .page-closing .disclaimer { position: absolute; left: var(--margin); right: var(--margin); bottom: 14mm; font-size: 14pt; line-height: 1.7; }
 
   /* 手机阅读自然重排；A4 固定尺寸仅用于打印与宽屏预览。 */
   @media screen and (max-width: 860px) {
     .page { width: calc(100% - 24px); height: auto; margin: 16px auto; }
     .page-title { font-size: 32px; }
     .body-text, .num-item p, .page-bleed .bleed-text, .page-timeline .tl-time,
-    .page-timeline .tl-desc, .page-specs .spec dd, .page-closing .disclaimer { font-size: 18px; }
+    .page-timeline .tl-desc, .page-specs .spec dd { font-size: 18px; }
     .footer { position: relative; left: auto; right: auto; bottom: auto; margin: 24px; font-size: 14px; }
     .page-cover .cover-body { position: relative; left: auto; right: auto; bottom: auto; padding: 320px 24px 32px; }
     .page-cover .cover-title { font-size: 40px; }
@@ -172,7 +171,6 @@
     .page-specs .spec-grid { margin: 24px; grid-template-columns: 1fr; }
     .page-closing .closing-body { position: relative; left: auto; right: auto; top: auto; padding: 60px 24px 24px; }
     .page-closing .contact { position: relative; left: auto; bottom: auto; padding: 100px 24px 24px; }
-    .page-closing .disclaimer { position: relative; left: auto; right: auto; bottom: auto; padding: 0 24px 32px; }
   }
 </style>
 </head>
@@ -260,7 +258,6 @@
     <div class="closing-title">{{结束语：让一次了解，成为下一步探索的开始。}}</div>
   </div>
   <div class="contact">咨询方式<br>{{联系方式 · 缺失写【待确认】}}</div>
-  <div class="disclaimer">{{免责声明}}</div>
 </section>
 
 </body>
