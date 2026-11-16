@@ -7,10 +7,12 @@
   },
   "skillChange": "Turn subject-specific cues into visual composition, compare real key pages when direction is open, extend the concept into content pages, and separate technical checks from aesthetic judgment.",
   "directions": {
-    "A": "River screenprint, cobalt/paper palette and large sans-serif title; expanded to six pages by the author.",
-    "B": "Large vertical Chinese typography and narrow garden photography; cover and itinerary prototype retained.",
-    "userSelection": "not confirmed",
-    "authorProvisionalChoice": "A"
+    "A": "River screenprint, cobalt/paper palette and large sans-serif title; selected by the user and extended across six pages.",
+    "B": "Large vertical Chinese typography and narrow garden photography; rejected by the user and archived, removed from the active showcase.",
+    "userSelection": "A",
+    "initialAuthorChoice": "A",
+    "userFeedback": "像第三张这种比较老土的设计，就可以不用了。我觉得第二张可以",
+    "archivedPrototype": "product-brochure-designer/examples/jiangsu-waterways/design/archive/direction-b.html"
   },
   "asset": {
     "file": "product-brochure-designer/examples/jiangsu-waterways/assets/river-editorial.png",
@@ -74,7 +76,6 @@
     "Fixed footer spacing and a clipped curve in the route diagram."
   ],
   "limits": [
-    "Author assessment is not user endorsement.",
     "No independent aesthetic benchmark or blind evaluation.",
     "No evidence of a general improvement guarantee across design tasks.",
     "The existing researched travel facts and licensing limits still apply."
@@ -123,5 +124,18 @@
       "localServerLinksInPdf": false,
       "visualReview": "Viewed all six final PDF page renders, the updated comparison and mobile cover / practical page."
     }
+  },
+  "directionSelectionVerification": {
+    "activeCovers": [
+      "previous version",
+      "selected river screenprint"
+    ],
+    "rejectedDirectionVisible": false,
+    "rejectedDirectionLinkedFromShowcase": false,
+    "innerPagePreviews": 2,
+    "showcaseImagesLoaded": true,
+    "mobileViewport": 375,
+    "mobileDocumentWidth": 375,
+    "archivedPrototypeImagesLoaded": true
   }
 }
