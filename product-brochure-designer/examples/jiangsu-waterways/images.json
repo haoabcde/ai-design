@@ -37,13 +37,13 @@
       "height": 853
     },
     {
-      "id": "river-editorial",
-      "path": "assets/river-editorial.png",
-      "role": "封面水线概念插画",
+      "id": "river-daylight",
+      "path": "assets/river-daylight.png",
+      "role": "封面日光水岸概念插画",
       "status": "approved",
       "sourceType": "ai_generated",
       "usage": "illustration",
-      "rights": "2026-11-16 使用宿主内置 ImageGen 生成的原创概念插画。非实景与地理地图；完整提示词见 design/river-art-prompt.md。",
+      "rights": "2026-11-17 使用宿主内置 ImageGen 调整原水线插画的明暗与色彩；苏州与扬州摄影仅作色彩和光感参考。作为概念插画使用，原始蓝稿保留为 river-editorial.png。完整提示词见 design/river-daylight-edit-prompt.md。",
       "width": 1055,
       "height": 1491
     }

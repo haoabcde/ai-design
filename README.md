@@ -19,7 +19,7 @@
 
 <img src="product-brochure-designer/examples/fold-concept/pages/page-01.png" alt="生图样册封面" width="290"> <img src="product-brochure-designer/examples/fold-concept/pages/page-02.png" alt="生图样册内页" width="290">
 
-[水岸江苏 HTML 样册](product-brochure-designer/examples/jiangsu-waterways/brochure.html) · [六页 PDF](product-brochure-designer/examples/jiangsu-waterways/brochure.pdf) · [设计演进](product-brochure-designer/examples/jiangsu-waterways/design/directions.html)：调研南京—扬州—苏州六日路线后，比较实际封面与行程页，用户选择“水线版画”。当前六页以水线贯穿插画和路线，组合实景摄影与可修改文字。正文打印14pt、手机18px；下载该目录即可打开 HTML。[内容来源与素材说明](product-brochure-designer/examples/jiangsu-waterways/sources.md)。
+[水岸江苏 HTML 样册](product-brochure-designer/examples/jiangsu-waterways/brochure.html) · [六页 PDF](product-brochure-designer/examples/jiangsu-waterways/brochure.pdf) · [日光版封面与内页](product-brochure-designer/examples/jiangsu-waterways/design/directions.html#daylight)：调研南京—扬州—苏州六日路线后，以水线构图串联插画和旅行内容。当前版本从实景的光感与自然色出发，以暖白承托水、建筑与花木，组合实景摄影与可修改文字。正文打印14pt、手机18px；下载该目录即可打开 HTML。[内容来源与素材说明](product-brochure-designer/examples/jiangsu-waterways/sources.md)。
 
 [设计思路迁移对照](product-brochure-designer/examples/jiangsu-waterways/design/directions.html#reference-transfer)：从用户参考中学习视觉母题、图像与阅读面的层次、形式与用途的关系，再迁移到既有江苏内容；封面继续沿用已选方向。HTML 指导与风格探索改为推导设计关系，避免固定风格菜单。
 
