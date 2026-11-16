@@ -1,0 +1,25 @@
+{
+  "title": "折光 FOLD · 概念样册",
+  "pageSize": "A4",
+  "brief": "brief.md",
+  "pages": [
+    {
+      "id": "cover",
+      "image": "pages/page-01.png",
+      "prompt": "prompts/page-01.md",
+      "status": "reviewed"
+    },
+    {
+      "id": "scene",
+      "image": "pages/page-02.png",
+      "prompt": "prompts/page-02.md",
+      "status": "reviewed",
+      "references": [
+        {
+          "path": "pages/page-01.png",
+          "role": "product-and-style"
+        }
+      ]
+    }
+  ]
+}

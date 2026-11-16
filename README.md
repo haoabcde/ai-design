@@ -78,9 +78,13 @@ node scripts/check.mjs --html design.html --images images.json
 ```bash
 # Python 环境需要 reportlab
 python3 scripts/images-to-pdf.py --images page-01.png page-02.png --output booklet.pdf
+# 多页续作：使用清单记录页序、提示词和参考关系，导出时核对文件与目检状态
+python3 scripts/images-to-pdf.py --manifest examples/fold-concept/booklet.json --output output/fold-concept-reviewed.pdf
 ```
 
 按参数页序合页，默认 A4，完整等比放置；比例不同处留白。报告原图像素与有效 ppi，不改写图像内容。`--page-size native` 使用首图的 96dpi 尺寸建立统一画幅。
+
+清单模式按 `pages` 数组顺序合页，路径相对清单文件。图片、完整提示词和参考文件需要齐全，每页经实际查看后标记 `reviewed`；检查状态由 Agent 更新，不增加用户确认步骤。未通过的页会阻止导出，防止遗漏页面或混入未检查的草稿。Python 测试可运行 `python3 -m unittest discover -s tests -p 'test_*.py'`；PDF 集成测试另需 reportlab、pypdf。
 
 可选的 HTML → PPTX 与 YAML 输入依赖：
 

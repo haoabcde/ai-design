@@ -4,7 +4,7 @@
 
 已完成首批优化：单页设计与产品手册；生图是正式设计路线，产品手册可选整页生图或 HTML 排版。原 skill 名保持兼容。
 
-GitHub 仓库更名为 [haoabcde/ai-design](https://github.com/haoabcde/ai-design)，本地 origin 与安装说明同步更新。变更见 [PR #1](https://github.com/haoabcde/ai-design/pull/1)，尚未合并。
+GitHub 仓库更名为 [haoabcde/ai-design](https://github.com/haoabcde/ai-design)，本地 origin 与安装说明同步更新。[PR #1](https://github.com/haoabcde/ai-design/pull/1) 已合并到默认主分支 `master`，合并提交为 `2624969`。
 
 ### 主要变更
 
@@ -32,3 +32,15 @@ GitHub 仓库更名为 [haoabcde/ai-design](https://github.com/haoabcde/ai-desig
 生图样册是虚构概念，约 127.6 ppi，供屏幕审阅；未做高分辨率印刷样张。HTML 检查不能证明布局、事实或授权，PPTX 仅支持语义版式且仍为近似排版。未做新旧版独立盲评或长手册生成稳定性评测，不将这些示例解释为任意任务效果保证。
 
 基线调查见 [调研](docs/research/2026-11-16-设计Skill范围调研.md) 与 [复现摘要](docs/research/evidence/2026-11-16-baseline.json)。本地临时验证产物保存在被 Git 忽略的 `output/`，最终生图样册 PDF 在 `output/pdf/fold-concept.pdf`。
+
+### 合并后吸收同类项目做法
+
+重新核对 baoyu 系列图片流程的逐页提示词、首图参考与保留成功页面做法，以及 Creative Production 对固定身份和可变场景的区分。没有复制第三方代码或接入额外生图后端。
+
+- 增加可选 `booklet.json`，记录共同简报、页序、每页完整提示词、参考角色及生成／目检状态；现有样册补上可复用的逐页文件。
+- `images-to-pdf.py --manifest` 在导出前检查文件、唯一页 id 与 `reviewed` 状态，缺页或未检查的草稿不会被静默跳过。允许不同页有意复用同一图片。
+- 目检状态由 Agent 查看成品后更新，不增加用户确认步骤。原 `--images` 参数继续可用，简单项目不必使用清单。
+- 新增 8 项 Python 测试，在带 reportlab／pypdf 的环境全部通过；无 reportlab 环境通过 6 项元数据测试、跳过 2 项 PDF 集成测试。
+- 结构自检现为 30 项，skill 校验通过。使用实际样册从不同工作目录导出 2 页 A4 PDF，验证页序、标题和嵌入像素与原图一致，未重新生成图像。
+
+验证摘要见 [清单导出证据](docs/research/evidence/2026-11-16-booklet-manifest.json)。这次验证针对续作与导出可靠性，没有新增生图质量对照实验。

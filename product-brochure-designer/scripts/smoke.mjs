@@ -26,6 +26,7 @@ const REQUIRED = [
   'scripts/lib/html.mjs',
   'scripts/images-to-pdf.py',
   'schemas/product.schema.json',
+  'schemas/booklet.schema.json',
 ];
 
 const ANCHORS = ['page-cover', 'page-split', 'page-bleed', 'page-timeline', 'page-specs', 'page-closing'];

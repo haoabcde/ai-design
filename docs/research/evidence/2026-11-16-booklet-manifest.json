@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-16",
+  "pr1": {
+    "merged": true,
+    "branch": "master",
+    "mergeCommit": "2624969a706e62b540f3b3aa1f48572522afd26f"
+  },
+  "manifest": "product-brochure-designer/examples/fold-concept/booklet.json",
+  "pythonTests": {
+    "withPdfDependencies": {
+      "passed": 8,
+      "skipped": 0
+    },
+    "withoutReportlab": {
+      "passed": 6,
+      "skipped": 2
+    }
+  },
+  "skillValidation": "passed",
+  "structureChecks": 30,
+  "realExport": {
+    "cwdIndependent": true,
+    "pdfPages": 2,
+    "title": "折光 FOLD · 概念样册",
+    "pageSize": "A4",
+    "orderAndDecodedSourcePixels": "identical",
+    "effectivePpi": [
+      127.6,
+      127.6
+    ]
+  },
+  "limits": [
+    "reviewed is an agent review record, not automatic visual verification",
+    "no new image-generation quality benchmark",
+    "no third-party source code copied"
+  ]
+}

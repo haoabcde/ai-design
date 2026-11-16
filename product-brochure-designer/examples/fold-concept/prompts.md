@@ -29,3 +29,9 @@ Edit only the small caption immediately below the large interior photograph on t
 ```bash
 python3 scripts/images-to-pdf.py --images examples/fold-concept/pages/page-01.png examples/fold-concept/pages/page-02.png --output output/fold-concept.pdf
 ```
+
+后续续作可使用 [booklet.json](booklet.json) 保存页序、检查状态和参考关系，以及 [全书简报](brief.md) 与逐页 `prompts/`。逐页文件是整理后的当前完整提示词，第 2 页已包含修正图注；上文保留实际生成与修改记录。清单导出：
+
+```bash
+python3 scripts/images-to-pdf.py --manifest examples/fold-concept/booklet.json --output output/fold-concept-reviewed.pdf
+```
