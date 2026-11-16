@@ -1,11 +1,11 @@
 ---
 name: product-brochure-designer
-description: Design static graphics with image generation and editing, including posters, covers, promotional images and multi-page product brochures. Brochures support whole-page image generation or precise HTML layout. Use for composition, typography, visual direction, format adaptation and PNG/PDF delivery while preserving supplied copy, brand assets and facts. Does not cover interactive UI, video or 3D production.
+description: Create static graphics with a visual concept, image generation/editing and precise layout, including posters, covers, promotional images and multi-page brochures. Use for art direction, composition, typography, visual refinement and PNG/PDF delivery. Brochures support whole-page image generation or HTML while preserving supplied copy, brand assets and facts. Does not cover interactive UI, video or 3D production.
 ---
 
 # 平面设计与产品手册
 
-以生图和图像编辑完成有设计意图的画面，也保留精确排版路线。首批支持**单页设计**和**产品手册**；手册可以整页生图，也可以用 HTML 排版。保留 `product-brochure-designer` 名称以兼容已有安装。
+从内容形成视觉概念，用图像、排字与构图完成设计。生图与图像编辑是正式设计手段，也保留精确排版路线。首批支持**单页设计**和**产品手册**；手册可以整页生图，也可以用 HTML 排版。保留 `product-brochure-designer` 名称以兼容已有安装。
 
 ## 1. 理解任务并选择流程
 
@@ -19,14 +19,17 @@ description: Design static graphics with image generation and editing, including
 
 不要把所有请求变成 A4，不强制单页设计填写 product.json，不为增加种类而额外引入流程。复杂信息图、完整品牌识别、摄影精修等若成为任务主体，使用相应专门工具与方法，明确本次可交付范围。
 
-## 2. 做设计判断
+## 2. 先形成视觉概念，再做版式
 
-先用一句话明确当前设计意图，例如“远看先注意日期和主题，近看能找到报名方式”。它用来决定层级、图像和节奏，不需要每次都另交长篇设计宣言。
+先找当前内容特有的形态、动作或材料，把它转成可见的构图关系。例如水岸旅行可以让一条水线组织标题与行程；仪器手册可以让精密剖面承担叙事。说清主视觉是什么、字与图如何相互作用，以及这个关系如何延续到内页。“高级感、大字、留白、卡片”不足以构成概念。
+
+方向开放、首次建立视觉体系，或用户反馈“没有设计感”时，读 [视觉发想与修订](references/art-direction.md)。先做有实质差异的关键画面，比较实际成品，再确定方向；不要直接把机制模板填满。手册宜同时试封面和一页内容较密的内页，避免只有封面好看。
 
 - 尊重已有品牌、用户参考和准确文案。不要按人群标签机械分配风格，也不要擅自压暗品牌色。
 - 信息少可以少做页数或用文字主导；信息多先编辑组织，不靠缩小字体塞满。
 - 方向明确就直接完成；需要比较时给有实质区别的少量方向，不固定生成数量。
 - 复用字体、色彩和空间关系，避免把同一构图重复当作所有任务的答案。
+- 需要鲜明插画、拼贴、特殊材质或完整构图探索时，调用生图／图像编辑参与设计；需要精确文字时再用 HTML 或原生排版落实。参考与素材应服务具体概念，不以增加图片数量代替设计判断。
 
 ## 3. 按交付要求制作
 
@@ -59,6 +62,8 @@ node scripts/image-workflow.mjs manifest --download-dir ./downloads --output ima
 ## 5. 渲染、复核与交付
 
 **必须查看实际成品。** 用浏览器／设计工具渲染，等待字体与图片加载，核对画布边界、溢出、主体裁切、文字准确性和实际阅读尺寸。多页逐页看，再整体看一致性与节奏；改尺寸后重新检查内容重排。
+
+另做视觉复核：缩略图的焦点、题材特征、字图关系、跨页节奏是否支持原概念。指出并修正最影响画面的具体问题；若只是合规、整齐而缺乏辨识度，回到概念与构图重做。技术检查通过不等于设计质量通过，作者自评也不等于用户认可。
 
 HTML 交付前运行：
 

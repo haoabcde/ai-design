@@ -58,3 +58,14 @@ GitHub 仓库更名为 [haoabcde/ai-design](https://github.com/haoabcde/ai-desig
 验证：13项 Node 测试、30项结构检查、skill 校验均通过；新样册 delivery 静态检查无错误或警告。浏览器检查1280px桌面、375px手机及640px重排，手机文档宽度等于视口；目录跳转与打印按钮可用。填入实际文字与图片的模板样稿共7页，打印文字无页外溢出，375px时正文18px且无横向溢出。
 
 PDF逐页查看，修复南京深色页的文字继承颜色、总览短行断句。最终6页均为A4，关键文字与页码可提取、链接不指向本地预览服务器；页面边界与页脚间距检查通过。证据见 [验证摘要](docs/research/evidence/2026-11-16-jiangsu-html.json)。这是旅行提案和视觉样册，没有实际订票、实地踏勘或商业印刷打样；出发前仍需重查开放与预约公告。
+
+### 视觉概念与审美反馈修订
+
+用户认为第一版没有设计感，并明确 skill 的目标是帮助 AI 做出有设计判断的作品。第一版可读性与内容检查有效，但没有达到用户的审美目标；不能以技术检查解释为设计质量通过。
+
+- 入口现在要求将内容线索推到可见构图，增加 [视觉发想与修订](product-brochure-designer/references/art-direction.md)：在方向开放或被否定时做有区别的画面原型，同时检查封面与真实内容内页。技术检查、作者判断与用户认可分别记录，不增加固定候选数或用户批准流程。
+- 使用同一份江苏资料制作 A“水线版画”和 B“园窗取景”的封面与行程页，保存 [实际画面对照](product-brochure-designer/examples/jiangsu-waterways/design/directions.html)。B 为探索稿，A 由作者暂选并扩展为六页；用户选择仍未确认，不声称审美目标已被证明达成。
+- 通过内置 ImageGen 生成一张水线概念插画，1055×1491；生成前保存 [完整提示词](product-brochure-designer/examples/jiangsu-waterways/design/river-art-prompt.md)，原图复制进项目供 HTML 引用。没有使用 CLI／API 回退或程序替代插画。
+- 水线进入路线图，三城页分别采用夜景压字、临水圆窗和窄长园林取景；文字保留为 HTML。14pt打印正文与18px手机正文继续保留。实测修复手机字图对比、页脚位置与曲线裁切，六页 PDF 已逐页查看。
+
+Skill 校验、30项结构检查和样册 delivery 静态检查通过。浏览器测量375px与640px重排无横向溢出，打印页面无越界；这些仅证明技术结果。过程与限制见 [二版验证记录](docs/research/evidence/2026-11-16-jiangsu-art-direction.json)，既有V1在提交 `4144e5f` 中可追溯。

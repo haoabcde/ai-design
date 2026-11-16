@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-16",
+  "scope": "Visual concept development and refinement after the user rejected the V1 aesthetic.",
+  "baseline": {
+    "commit": "4144e5f",
+    "assessment": "User said the design lacked a sense of design. Prior technical checks do not establish aesthetic quality."
+  },
+  "skillChange": "Turn subject-specific cues into visual composition, compare real key pages when direction is open, extend the concept into content pages, and separate technical checks from aesthetic judgment.",
+  "directions": {
+    "A": "River screenprint, cobalt/paper palette and large sans-serif title; expanded to six pages by the author.",
+    "B": "Large vertical Chinese typography and narrow garden photography; cover and itinerary prototype retained.",
+    "userSelection": "not confirmed",
+    "authorProvisionalChoice": "A"
+  },
+  "asset": {
+    "file": "product-brochure-designer/examples/jiangsu-waterways/assets/river-editorial.png",
+    "width": 1055,
+    "height": 1491,
+    "tool": "built-in image_gen",
+    "usage": "concept illustration, not documentary photography or a geographic map",
+    "prompt": "product-brochure-designer/examples/jiangsu-waterways/design/river-art-prompt.md"
+  },
+  "technical": {
+    "skillValidator": "pass",
+    "smokeChecks": 30,
+    "deliveryCheck": {
+      "pages": 6,
+      "imageFiles": 4,
+      "errors": 0,
+      "warnings": 0
+    },
+    "mobile": {
+      "viewport": 375,
+      "documentWidth": 375,
+      "bodyPx": 18,
+      "outsideElements": 0
+    },
+    "reflow": {
+      "viewport": 640,
+      "documentWidth": 640
+    },
+    "print": {
+      "bodyPt": 14,
+      "outsideElementsByPage": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bodyPagesFooterBottomGapPx": 34
+    },
+    "pdf": {
+      "pages": 6,
+      "sha256": "54127e15718e63248abf9a942cc79166ef76f99ba8d368753c178b563464438b",
+      "bytes": 4587045,
+      "keyTextAndFooters": "pass"
+    },
+    "offlineFiles": {
+      "handbookAllImagesLoaded": true,
+      "handbookWidth375": 375,
+      "comparisonAllImagesLoaded": true,
+      "comparisonWidth375": 375,
+      "tocAnchorTopPx": 24,
+      "printButtonInvoked": true
+    }
+  },
+  "visualInspection": [
+    "All six PDF pages viewed.",
+    "Mobile cover and Yangzhou page viewed.",
+    "Removed cover text crossing a pale river area.",
+    "Moved mobile subtitle away from illustration details.",
+    "Fixed footer spacing and a clipped curve in the route diagram."
+  ],
+  "limits": [
+    "Author assessment is not user endorsement.",
+    "No independent aesthetic benchmark or blind evaluation.",
+    "No evidence of a general improvement guarantee across design tasks.",
+    "The existing researched travel facts and licensing limits still apply."
+  ]
+}

@@ -35,6 +35,17 @@
       "usage": "documentary",
       "width": 1280,
       "height": 853
+    },
+    {
+      "id": "river-editorial",
+      "path": "assets/river-editorial.png",
+      "role": "封面水线概念插画",
+      "status": "approved",
+      "sourceType": "ai_generated",
+      "usage": "illustration",
+      "rights": "2026-11-16 使用宿主内置 ImageGen 生成的原创概念插画。非实景与地理地图；完整提示词见 design/river-art-prompt.md。",
+      "width": 1055,
+      "height": 1491
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 结合生图与图像编辑能力的静态平面设计 Skill：制作海报、封面、宣传图，也支持 **HTML 排版版／生图视觉版**产品手册。
 
-先建立设计意图，再完成构图、字图关系与细节；以实际成品核对文字、产品形象、尺寸和完整性。仓库原名 `product-brochure-designer`；skill 调用名与内层目录暂时保留以兼容已有安装。可用于具备相应工具的 Codex、Claude Code 等 Agent 环境。
+从内容中形成可见的设计概念，再完成构图、字图关系与细节。方向开放时先做关键画面对照，让概念进入封面和真实内容页；以实际成品修订，而不把技术检查通过当作设计质量通过。仓库原名 `product-brochure-designer`；skill 调用名与内层目录暂时保留以兼容已有安装。可用于具备相应工具的 Codex、Claude Code 等 Agent 环境。
 
 ## 两类任务，两种制作方式
 
@@ -19,7 +19,7 @@
 
 <img src="product-brochure-designer/examples/fold-concept/pages/page-01.png" alt="生图样册封面" width="290"> <img src="product-brochure-designer/examples/fold-concept/pages/page-02.png" alt="生图样册内页" width="290">
 
-[水岸江苏 HTML 样册](product-brochure-designer/examples/jiangsu-waterways/brochure.html) · [直接查看六页 PDF](product-brochure-designer/examples/jiangsu-waterways/brochure.pdf)：先调研再策划南京—扬州—苏州六日路线，采用大标题、实景摄影、逐日安排和官方预约指引。正文打印14pt、手机18px；下载该目录后可直接打开 HTML。保留 [内容来源与摄影许可](product-brochure-designer/examples/jiangsu-waterways/sources.md)。
+[水岸江苏 HTML 样册](product-brochure-designer/examples/jiangsu-waterways/brochure.html) · [六页 PDF](product-brochure-designer/examples/jiangsu-waterways/brochure.pdf) · [视觉方向对照](product-brochure-designer/examples/jiangsu-waterways/design/directions.html)：调研南京—扬州—苏州六日路线后，试做“水线版画”和“园窗取景”两种方向的封面与行程页。当前以水线版画扩展全册，组合概念插画、实景摄影与可修改文字。正文打印14pt、手机18px；下载该目录即可打开 HTML。[内容来源与素材说明](product-brochure-designer/examples/jiangsu-waterways/sources.md)。
 
 <img src="product-brochure-designer/examples/jiangsu-waterways/preview-cover.jpg" alt="水岸江苏 HTML 样册封面" width="290"> <img src="product-brochure-designer/examples/jiangsu-waterways/preview-nanjing.jpg" alt="水岸江苏 HTML 样册南京内页" width="290">
 
@@ -40,7 +40,7 @@ Agent 从 [SKILL.md](product-brochure-designer/SKILL.md) 开始：
 
 1. 理解用途、读者、准确内容、素材、尺寸与交付格式。
 2. 选择单页／手册，并确定生图或 HTML 路线。
-3. 按任务读取相应参考，制作并针对具体问题精修。
+3. 按任务读取相应参考，以视觉概念和关键页确定方向，再展开、查看和精修。
 4. 查看实际 PNG／PDF，核对内容、产品、字体、裁切与尺寸，再交付。
 
 可直接请求：
@@ -107,6 +107,7 @@ product-brochure-designer/
 ├── agents/openai.yaml
 ├── references/
 │   ├── design-system.md       # 共享设计判断
+│   ├── art-direction.md       # 视觉发想、关键页比较与审美反馈
 │   ├── image-generation.md    # 整图／整页生图、编辑、多页一致性
 │   ├── single-page.md         # 单页与跨尺寸设计
 │   ├── brochure.md            # 手册两种路线及 HTML 机制
