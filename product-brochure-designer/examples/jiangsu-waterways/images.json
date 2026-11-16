@@ -3,7 +3,7 @@
     {
       "id": "suzhou-garden",
       "path": "assets/suzhou-garden.jpg",
-      "role": "苏州拙政园内页摄影",
+      "role": "苏州拙政园摄影，用于路线与城市页",
       "status": "approved",
       "sourceType": "licensed",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Touring_the_Humble_Administrator%27s_Garden_10.jpg",
@@ -15,7 +15,7 @@
     {
       "id": "nanjing-qinhuai",
       "path": "assets/nanjing-qinhuai.jpg",
-      "role": "南京秦淮夜景内页摄影",
+      "role": "南京秦淮夜景摄影，用于路线与城市页",
       "status": "approved",
       "sourceType": "licensed",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:Confucius_Temple_and_Qinhuai_River,_Nanjing_Night.jpg",
@@ -27,7 +27,7 @@
     {
       "id": "yangzhou-lake",
       "path": "assets/yangzhou-lake.jpg",
-      "role": "扬州瘦西湖五亭桥摄影",
+      "role": "扬州瘦西湖五亭桥摄影，用于路线与城市页",
       "status": "approved",
       "sourceType": "licensed",
       "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Five-Pavilion_Bridge.jpg",
