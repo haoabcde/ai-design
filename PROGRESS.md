@@ -4,6 +4,8 @@
 
 已完成首批优化：单页设计与产品手册；生图是正式设计路线，产品手册可选整页生图或 HTML 排版。原 skill 名保持兼容。
 
+GitHub 仓库更名为 [haoabcde/ai-design](https://github.com/haoabcde/ai-design)，本地 origin 与安装说明同步更新。变更见 [PR #1](https://github.com/haoabcde/ai-design/pull/1)，尚未合并。
+
 ### 主要变更
 
 - 共享设计判断与单页／手册／生图参考分开，去掉固定页数、唯一遮罩做法、自动压暗品牌色等通用限制。

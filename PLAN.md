@@ -2,9 +2,9 @@
 
 ## 已确认的目标
 
-优化 `haoabcde/product-brochure-designer`，以生图／图像编辑完成设计，并保留精确排版能力。首批支持海报、封面、宣传图等单页设计，以及产品手册；手册明确分为 HTML 排版版与生图视觉版。暂不扩展到所有图片相关专业。
+优化 `haoabcde/ai-design`（原名 `product-brochure-designer`），以生图／图像编辑完成设计，并保留精确排版能力。首批支持海报、封面、宣传图等单页设计，以及产品手册；手册明确分为 HTML 排版版与生图视觉版。暂不扩展到所有图片相关专业。
 
-保留原 skill 名与仓库路径，便于已有安装升级。`wechat-cover-skill` 已按用户要求删除并从 GitHub 页面确认。
+GitHub 仓库已按用户要求改名，原 skill 调用名与内层目录保持兼容，安装 URL 与本地 origin 同步更新。`wechat-cover-skill` 已按用户要求删除并从 GitHub 页面确认。
 
 ## 已实施
 

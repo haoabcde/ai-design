@@ -1,8 +1,8 @@
-# product-brochure-designer
+# ai-design
 
 结合生图与图像编辑能力的静态平面设计 Skill：制作海报、封面、宣传图，也支持 **HTML 排版版／生图视觉版**产品手册。
 
-先建立设计意图，再完成构图、字图关系与细节；以实际成品核对文字、产品形象、尺寸和完整性。保留原 skill 名称以兼容已有安装，可用于具备相应工具的 Codex、Claude Code 等 Agent 环境。
+先建立设计意图，再完成构图、字图关系与细节；以实际成品核对文字、产品形象、尺寸和完整性。仓库原名 `product-brochure-designer`；skill 调用名与内层目录暂时保留以兼容已有安装。可用于具备相应工具的 Codex、Claude Code 等 Agent 环境。
 
 ## 两类任务，两种制作方式
 
@@ -52,8 +52,8 @@ Agent 从 [SKILL.md](product-brochure-designer/SKILL.md) 开始：
 以下命令在 **skill 子目录**运行：
 
 ```bash
-git clone https://github.com/haoabcde/product-brochure-designer.git
-cd product-brochure-designer/product-brochure-designer
+git clone https://github.com/haoabcde/ai-design.git
+cd ai-design/product-brochure-designer
 node scripts/smoke.mjs
 node --test tests/*.test.mjs
 ```
