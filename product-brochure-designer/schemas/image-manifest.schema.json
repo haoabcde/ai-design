@@ -1,5 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Local image manifest (draft or delivery)",
   "type": "object",
   "required": ["images"],
   "properties": {
@@ -7,14 +8,18 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "path", "role", "status"],
+        "required": ["id", "path", "role", "status", "sourceType"],
         "properties": {
-          "id": {"type": "string"},
-          "path": {"type": "string"},
-          "role": {"type": "string"},
-          "status": {"enum": ["approved", "preview"]},
-          "sourceUrl": {"type": "string"},
-          "rights": {"type": "string"}
+          "id": { "type": "string", "minLength": 1 },
+          "path": { "type": "string", "minLength": 1, "description": "Filesystem path relative to this manifest, not the HTML file" },
+          "role": { "type": "string", "minLength": 1 },
+          "status": { "enum": ["approved", "preview"] },
+          "sourceType": { "enum": ["client_supplied", "official_wechat", "official_web", "licensed", "ai_generated", "unknown"] },
+          "sourceUrl": { "type": "string" },
+          "rights": { "type": "string", "description": "Usage permission or the project record documenting it; required for used delivery assets" },
+          "usage": { "enum": ["illustration", "documentary"] },
+          "width": { "type": ["integer", "null"], "minimum": 1 },
+          "height": { "type": ["integer", "null"], "minimum": 1 }
         }
       }
     }

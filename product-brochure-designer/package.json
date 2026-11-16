@@ -1,10 +1,11 @@
 {
   "name": "product-brochure-designer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "private": true,
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {
+    "test": "node --test tests/*.test.mjs",
     "smoke": "node scripts/smoke.mjs",
     "check": "node scripts/check.mjs",
     "pptx": "node scripts/html-to-pptx.mjs",

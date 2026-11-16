@@ -1,83 +1,115 @@
-# product-brochure-designer
+# ai-design
 
-让任意 AI Agent 都能做出高级、精美、杂志级的 A4 竖版产品手册。
+结合生图与图像编辑能力的静态平面设计 Skill：制作海报、封面、宣传图，也支持 **HTML 排版版／生图视觉版**产品手册。
 
-一个跨 Agent 可移植的 Skill：输入结构化产品资料 + 本地图片，Agent 依据内置的**国际顶尖设计知识库**做出设计判断，手写 HTML 母版，浏览器渲染目检后导出 PDF（可选 PPTX）。适用于产品宣传册、销售手册、研学手册、项目目录、客户介绍等多页文档场景。可在 Codex、Claude Code、WorkBuddy 或任何 Agent 环境中使用。
+先建立设计意图，再完成构图、字图关系与细节；以实际成品核对文字、产品形象、尺寸和完整性。仓库原名 `product-brochure-designer`；skill 调用名与内层目录暂时保留以兼容已有安装。可用于具备相应工具的 Codex、Claude Code 等 Agent 环境。
 
-## v2：知识驱动，不再硬编码
+## 两类任务，两种制作方式
 
-v1 用代码硬编码版式引擎，真实使用中暴露出图文重叠、廉价感等问题。v2 改为 **superpowers 式的知识驱动**：
+| 任务 | 生图设计 | HTML 排版 |
+|---|---|---|
+| 海报、封面、宣传图、Banner | 可以直接完成整张设计，并用图像编辑做局部修改 | 适合精确文字、品牌与改版要求，也可以组合生成素材 |
+| 产品手册、宣传册、项目目录 | 统一产品和视觉依据，逐页生成、校对并汇总 PDF | 编辑内容、规划页面，HTML 母版渲染为 PDF；支持有限的可编辑 PPTX 转换 |
 
-- **设计是知识，不是代码**：网格系统、字体排印、色彩纪律、留白比例、图像处理、叙事弧——蒸馏自瑞士国际主义（Müller-Brockmann）、Apple/Dieter Rams、原研哉/MUJI 与 2025 行业趋势，存放在 `references/design-system.md`，由 Agent 阅读后做出判断
-- **5 个风格方向**（editorial / swiss / muji / dark-bleed / heritage）：`references/style-directions.md`
-- **HTML 母版 → PDF** 为主线：浏览器打印即得高保真成品，**零 npm 依赖**
-- **PPTX 保留为可选线**：同一 HTML 经语义锚点转换为可编辑 PPTX（pptxgenjs 为可选依赖）
-- 模板只演示技术机制（A4 页块、CSS 变量、cover 填充、打印样式），不硬编码版式
+生图不局限于生成背景。手册根据视觉表达、内容密度、编辑要求及用户选择走对应路线；不把所有任务强制变成 A4 或同一种杂志风格。首批集中在单页设计和手册，系列图文等后续通过真实任务再扩展。
 
-## 特性
+## 已跑通的示例
 
-- **图文永不重叠**：grid/flex 分区 + 渐变遮罩，结构上杜绝 v1 的文字压图不可读问题
-- **照片不变形**：所有图片 `object-fit: cover` 等比裁切
-- **官方图片优先**：三阶段图片工作流，指引 Agent 优先从官方公众号、官网收集素材
-- **事实安全**：内部价格/成本/渠道关键词检查；缺失事实显示 `【待确认】`，绝不编造
-- **轻量可移植**：核心 = Markdown 知识库 + 1 个 HTML 模板 + 3 个零依赖 Node 脚本
+[折光 FOLD 生图样册](product-brochure-designer/examples/fold-concept/prompts.md)：两页整体生图，第二页参考第一页延续产品与风格，并用局部编辑修正图注。概念产品明确标注为非实物；保存原图与提示词，可复现 PDF 合页。
 
-## 快速开始
+<img src="product-brochure-designer/examples/fold-concept/pages/page-01.png" alt="生图样册封面" width="290"> <img src="product-brochure-designer/examples/fold-concept/pages/page-02.png" alt="生图样册内页" width="290">
 
+其他示例：
+
+- [开放工作室](product-brochure-designer/examples/open-studio/)：同一虚构活动的竖版 1080×1440、横版 1920×1080 HTML 排版，展示跨尺寸重排。
+- [研学手册](product-brochure-designer/examples/sustech-study-tour/)：原有 10 页 HTML／PDF 草稿，含待确认内容和图像占位，用于机制参考。
+
+示例与一次试跑不能证明任意任务都能稳定达到同样质量。范围判断和基线问题见 [调研](docs/research/2026-11-16-设计Skill范围调研.md)，本轮实施与验证见 [PROGRESS.md](PROGRESS.md)。
+
+其他同类项目及可借鉴做法见 [同类项目对照](docs/research/2026-11-16-同类项目对照.md)。
+
+## 安装与使用
+
+真正的 skill 是仓库内的 **`product-brochure-designer/` 子目录**，其根部有 `SKILL.md`。把该子目录放到目标项目的 `.agents/skills/` 或 `.claude/skills/` 等宿主支持的位置；不要把仓库根目录当作 skill，也无需全局安装。
+
+Agent 从 [SKILL.md](product-brochure-designer/SKILL.md) 开始：
+
+1. 理解用途、读者、准确内容、素材、尺寸与交付格式。
+2. 选择单页／手册，并确定生图或 HTML 路线。
+3. 按任务读取相应参考，制作并针对具体问题精修。
+4. 查看实际 PNG／PDF，核对内容、产品、字体、裁切与尺寸，再交付。
+
+可直接请求：
+
+```text
+用 $product-brochure-designer 为这个活动做一张生图海报，日期和标题严格按我的文案。
+用 $product-brochure-designer 做一份生图版产品手册，保持每页的产品外观与视觉风格一致。
+用 $product-brochure-designer 把这些资料做成 HTML 产品手册，保留精确参数和可修改文字。
 ```
-1. 阅读 SKILL.md（Agent 执行手册）
-2. 准备 product.json + images.json（图片工作流可生成搜图计划）
-3. 基于 templates/brochure.html 改写每一页
-4. 浏览器渲染逐页目检 → node scripts/check.mjs 安全检查 → 打印导出 PDF
-```
 
-结构自检（零依赖）：
+## 脚本
+
+以下命令在 **skill 子目录**运行：
 
 ```bash
+git clone https://github.com/haoabcde/ai-design.git
+cd ai-design/product-brochure-designer
 node scripts/smoke.mjs
+node --test tests/*.test.mjs
 ```
 
-## 命令
+HTML 路线的 JSON 输入和核心脚本不需要 npm 依赖：
 
 ```bash
-node scripts/image-workflow.mjs analyze     --product product.json        # 分析需要哪些图
-node scripts/image-workflow.mjs source-plan --product product.json        # 官方优先搜图计划
-node scripts/image-workflow.mjs manifest    --download-dir ./downloads --output images.json
-node scripts/check.mjs --html brochure.html --product product.json --images images.json   # 交付前安全检查
-pnpm install && node scripts/html-to-pptx.mjs --html brochure.html --output out.pptx      # 可选 PPTX
+node scripts/image-workflow.mjs analyze --product product.json
+node scripts/image-workflow.mjs source-plan --product product.json
+node scripts/image-workflow.mjs manifest --download-dir downloads --output images.json
+node scripts/check.mjs --html design.html --images images.json
+# 产品手册可再传 --product product.json；草稿可加 --mode draft
 ```
 
-## 项目结构
+- 清单路径相对 `images.json`；HTML 图片路径相对 HTML。清单初始待审核，不覆盖已有审核记录。
+- 客户素材、官方来源、授权图库与说明性生成图分别记录使用依据。公开发布不自动代表获准使用。
+- 检查器核对静态 HTML、实际素材引用、模板占位、待确认内容和部分文案线索。它不测量布局，也不能证明事实或授权成立；生图结果与最终导出仍需目检。
+- JSON Schema 用于输入编辑与外部校验；脚本仅执行文档所述的行为检查，不是完整 Schema 校验器。
 
+生图版手册可以使用宿主 PDF 工具，或这个可选 Python 合页脚本：
+
+```bash
+# Python 环境需要 reportlab
+python3 scripts/images-to-pdf.py --images page-01.png page-02.png --output booklet.pdf
 ```
+
+按参数页序合页，默认 A4，完整等比放置；比例不同处留白。报告原图像素与有效 ppi，不改写图像内容。`--page-size native` 使用首图的 96dpi 尺寸建立统一画幅。
+
+可选的 HTML → PPTX 与 YAML 输入依赖：
+
+```bash
+pnpm install --frozen-lockfile
+node scripts/html-to-pptx.mjs --html brochure.html --output brochure.pptx
+```
+
+PPTX 仅支持六类语义版式，是可编辑近似稿。自定义页面会停止并报错，避免静默输出缺页文件；整页生图不会自动变成可编辑文字。
+
+## 目录
+
+```text
 product-brochure-designer/
-├── SKILL.md                  # Agent 执行手册（先读这个）
-├── package.json
-├── agents/openai.yaml        # Agent 接口定义
+├── SKILL.md
+├── agents/openai.yaml
 ├── references/
-│   ├── design-system.md      # 设计系统知识库（网格/字体/色彩/留白/图像/叙事/反模式）
-│   ├── style-directions.md   # 5 个风格方向
-│   ├── fact-policy.md        # 事实与资料缺口策略
-│   ├── image-policy.md       # 图片来源、审核与禁止项
-│   └── platform-notes.md     # 平台注意事项
-├── templates/
-│   └── brochure.html         # A4 技术机制参考模板（含 PPTX 语义锚点）
-├── schemas/                  # 输入 JSON Schema
-├── scripts/
-│   ├── image-workflow.mjs    # 图片工作流（零依赖）
-│   ├── check.mjs             # 交付前安全检查（零依赖）
-│   ├── html-to-pptx.mjs      # HTML → PPTX（可选依赖 pptxgenjs）
-│   ├── smoke.mjs             # 结构自检
-│   └── lib/utils.mjs
-└── examples/                 # 示例产品输入
+│   ├── design-system.md       # 共享设计判断
+│   ├── image-generation.md    # 整图／整页生图、编辑、多页一致性
+│   ├── single-page.md         # 单页与跨尺寸设计
+│   ├── brochure.md            # 手册两种路线及 HTML 机制
+│   └── ...                   # 风格、素材、事实、运行说明
+├── templates/                # 单页像素画布／A4 HTML 机制
+├── scripts/                  # 检查、素材清单、PDF 合页、有限 PPTX 转换
+├── schemas/
+├── tests/
+└── examples/
 ```
 
-## 环境要求
+核心脚本需要 Node.js ≥20；生图与原生设计路线依赖宿主实际工具。Python PDF 合页、PPTX 与 YAML 支持均为可选。
 
-- Node.js ≥ 20（仅脚本需要；HTML→PDF 主线不依赖 Node）
-- 宿主环境的浏览器工具（渲染目检 + 打印 PDF）
-- 可选：pptxgenjs（PPTX 转换）、yaml（YAML 输入）
-
-## License
-
-[MIT](LICENSE)
+[MIT License](LICENSE)

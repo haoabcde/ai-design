@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-16",
+  "baseCommit": "1bb81b5a4105884113ad08eba783e40b19b988b2",
+  "scope": "Repository review and script reproductions; no cross-category visual quality benchmark yet",
+  "checks": [
+    {
+      "name": "structure-smoke",
+      "command": "node product-brochure-designer/scripts/smoke.mjs",
+      "result": { "ok": true, "checked": 23 }
+    },
+    {
+      "name": "missing-image-and-template-placeholder",
+      "html": "<section class=\"page page-cover\"><h1>{{产品名}}</h1><img src=\"missing.jpg\"></section>",
+      "manifest": { "images": [] },
+      "result": { "pass": true, "errors": [], "warnings": [], "pendingFacts": [] },
+      "expected": "Report the missing image and unresolved template placeholder"
+    },
+    {
+      "name": "manifest-relative-path",
+      "input": { "downloadDirectory": "<temporary>/downloads", "output": "<temporary>/images.json", "imageFile": "<temporary>/downloads/cover.png" },
+      "result": { "manifestEntry": "cover.png", "existsAtManifestRelativePath": false },
+      "expectedEntry": "downloads/cover.png"
+    },
+    {
+      "name": "example-pptx-export",
+      "input": "product-brochure-designer/examples/sustech-study-tour/brochure.html",
+      "result": { "pages": 10, "skipped": [2, 3, 6, 8], "actualSlideXmlCount": 6 },
+      "retainedPageContent": {
+        "originalPage4": { "present": ["MODULES", "三个环节，", "构成完整半日", "04"], "missing": ["校园参观", "主题讲座", "科技体验"] },
+        "originalPage5": { "present": ["SCHEDULE", "半日行程", "05"], "missing": ["签到与活动说明", "校园环境参观", "主题讲座或科普讲座", "科技体验与交流", "总结分享"] },
+        "originalPage7": { "present": ["PRODUCT FACTS", "产品规格", "07"], "missing": ["活动时长", "0.5 天", "成团人数", "30 人", "用餐安排", "25 元/人"] }
+      },
+      "artifacts": ["output/research/baseline.pptx", "output/research/pptx-baseline.json"]
+    },
+    {
+      "name": "frozen-install",
+      "command": "pnpm install --frozen-lockfile",
+      "cwd": "product-brochure-designer",
+      "exitCode": 1,
+      "error": "ERR_PNPM_OUTDATED_LOCKFILE: optionalDependencies in pnpm-lock.yaml do not match package.json"
+    }
+  ]
+}

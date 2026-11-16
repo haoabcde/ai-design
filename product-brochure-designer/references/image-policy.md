@@ -1,42 +1,35 @@
-# Image policy
+# 素材来源与记录
 
-## Source priority
+优先检查项目或客户已有且获得使用许可的素材。官方公众号、官网与授权图库可作为寻找线索；公开发布本身不能证明可以转载、商用或删除水印。确认使用范围后再标记审核通过。
 
-1. **Client-supplied assets** — the safest source when rights are confirmed.
-2. **Official WeChat account** (`official_wechat`) — search the product's official 公众号; cover images and in-article high-resolution photos are usually usable. Avoid the watermark in the lower-right corner.
-3. **Official website** (`official_web`) — check the news center, gallery, or about-us pages; prefer landscape, watermark-free, high-resolution images.
-4. **Licensed stock** (`licensed`) — e.g. Unsplash, Pexels; acceptable as fallback.
-5. **Normal web images** — may only be used as `preview` in `sample` mode; never promoted to `delivery`.
+## HTML 图片清单
 
-## Banned sources for delivery
+`manifest` 只扫描下载目录的直接文件，按文件名稳定排序，生成相对清单位置的路径。它不判断图片内容、尺寸、用途或授权，初始角色为 `unassigned`；不覆盖已有清单，以免丢失人工审核信息。
 
-The following are rejected in `delivery` mode and by `promote`:
+```json
+{
+  "images": [{
+    "id": "hero",
+    "path": "assets/hero.jpg",
+    "role": "cover",
+    "status": "approved",
+    "sourceType": "client_supplied",
+    "rights": "客户确认可用于本次宣传与交付；对应确认记录保存在项目资料中"
+  }]
+}
+```
 
-- `preview` status images
-- `ai_generated` images used to represent a real venue, factory, customer activity, product, or person
-- ordinary web images whose rights are not documented (`sourceType: unknown` or generic web)
+- `path` 是文件路径，相对 `images.json`；HTML 中的图片 URL 则相对 HTML。
+- `sourceType`：`client_supplied`、`official_wechat`、`official_web`、`licensed`、`ai_generated` 或尚未审核的 `unknown`。
+- 正式交付所用图片需要 `status: approved` 与非空 `rights`。官方／授权图库来源还需 `sourceUrl`；填写许可依据或对应项目记录，不把未确认情况写成已获授权。
+- 说明性生成图需 `sourceType: ai_generated`、`usage: illustration`，并在 rights 或项目记录中注明生成来源；不作为真实场景证明。
+- 清单可保留没有使用的 `preview` 素材；HTML 检查只要求实际引用的图通过来源审核。
+- 完整生图或原生设计工具路线不必转 HTML，按相同原则保留来源记录并查看最终文件。
 
-## Roles and placement
+## 图像与人物
 
-- `cover` — front cover, full-bleed background. 必须横图（宽高比 ≥3:2），主体避开下 1/3（标题区）。
-- `venue` / `context` — campus, location, or scene background for split pages and full-bleed pages. 分栏竖位可用竖图。
-- `detail` / `activity` — close-up or action shots for split pages. 人物活动照注意主体在画面中的位置，便于 `object-position` 保焦点。
-- Official WeChat / website images are sorted to the front and preferred for cover and hero/venue.
-- 栏位比例与图比例匹配优先：需要裁掉画面 >35% 才能塞进栏位的图，不要用于该栏位（换栏位或换图）。
+尺寸按实际栏位与输出要求判断，不固定封面必须横图；先检查主体，再决定比例与裁切。低清、拉伸、与主题无关或无法确认使用依据的素材不能靠滤镜补救。
 
-## Quality rules
+可识别人物的使用范围需要确认，未成年人尤其注意相应授权；官方发布过、远景或侧脸都不自动证明已满足本次使用要求。可选择不含可识别人像的素材。
 
-- Cover/hero images: width ≥ 2400 px preferred.
-- Detail/context images: width ≥ 1800 px preferred.
-- Reject: watermarks, visible large text, low resolution, unrelated locations, noisy crowds, heavy saturation, stretched crops.
-- Prefer landscape aspect. Apply lower saturation and a subtle dark overlay for readable copy; do not edit source pixels.
-
-## Manifest and approval
-
-`node scripts/image-workflow.mjs manifest` creates a draft `images.json` with `status: preview` and `sourceType: unknown`. Review each image, set `status: approved` and the correct `sourceType`, before running delivery.
-
-## People and portrait rights
-
-- **未成年人（青少年/学生）**：未取得监护人书面授权，不得使用正脸清晰可辨的照片。优先选择：背影、侧脸、远景群体、戴口罩场景、官方已公开发布的活动图（官方公众号/官网已发布的图通常已处理授权，但仍优先非正脸构图）。
-- 成年人正脸特写同样需要授权；客户提供的素材需与客户确认授权范围。
-- 人物照片数量克制：一本手册 1–3 张有人物的照片即可，场景与细节照片为主。
+Logo、包装、作品和产品照片不得因裁切或生成改动而歪曲必要事实。用户要求局部修改时保留未修改内容，保存原文件。
