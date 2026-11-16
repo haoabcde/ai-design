@@ -12,7 +12,7 @@ description: Design static graphics with image generation and editing, including
 利用用户提供的文案、素材、参考图和已有项目上下文，确定：用途与读者、希望读者记住或采取的行动、必须保留的内容、尺寸与交付格式。已有信息足够时直接推进；缺少关键事实或无法推断的交付要求时才询问。
 
 - **海报、封面、宣传图、Banner、邀请图或已有图改版**：读 [单页设计](references/single-page.md)。
-- **产品手册、宣传册、项目目录**：读 [多页手册](references/brochure.md)。
+- **产品手册、研学手册、旅游手册、宣传册、项目目录**：读 [多页手册](references/brochure.md)。
 - 两者都用 [设计判断](references/design-system.md)；方向不明确或需要探索时再读 [风格方向](references/style-directions.md)。
 - 使用生图／图像编辑时，读 [生图设计](references/image-generation.md)，包括整页设计和多页一致性。
 - 用户只要 prompt、评审或局部修改时，交付其所需结果，不自动扩展为完整设计项目。

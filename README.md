@@ -19,10 +19,14 @@
 
 <img src="product-brochure-designer/examples/fold-concept/pages/page-01.png" alt="生图样册封面" width="290"> <img src="product-brochure-designer/examples/fold-concept/pages/page-02.png" alt="生图样册内页" width="290">
 
+[水岸江苏 HTML 样册](product-brochure-designer/examples/jiangsu-waterways/brochure.html) · [直接查看六页 PDF](product-brochure-designer/examples/jiangsu-waterways/brochure.pdf)：先调研再策划南京—扬州—苏州六日路线，采用大标题、实景摄影、逐日安排和官方预约指引。正文打印14pt、手机18px；下载该目录后可直接打开 HTML。保留 [内容来源与摄影许可](product-brochure-designer/examples/jiangsu-waterways/sources.md)。
+
+<img src="product-brochure-designer/examples/jiangsu-waterways/preview-cover.jpg" alt="水岸江苏 HTML 样册封面" width="290"> <img src="product-brochure-designer/examples/jiangsu-waterways/preview-nanjing.jpg" alt="水岸江苏 HTML 样册南京内页" width="290">
+
 其他示例：
 
 - [开放工作室](product-brochure-designer/examples/open-studio/)：同一虚构活动的竖版 1080×1440、横版 1920×1080 HTML 排版，展示跨尺寸重排。
-- [研学手册](product-brochure-designer/examples/sustech-study-tour/)：原有 10 页 HTML／PDF 草稿，含待确认内容和图像占位，用于机制参考。
+- [研学手册旧稿](product-brochure-designer/examples/sustech-study-tour/)：原有 10 页草稿，含待确认内容和图像占位，保留作机制参考；新 HTML 手册以大字和响应式阅读为默认方向。
 
 示例与一次试跑不能证明任意任务都能稳定达到同样质量。范围判断和基线问题见 [调研](docs/research/2026-11-16-设计Skill范围调研.md)，本轮实施与验证见 [PROGRESS.md](PROGRESS.md)。
 
@@ -116,4 +120,4 @@ product-brochure-designer/
 
 核心脚本需要 Node.js ≥20；生图与原生设计路线依赖宿主实际工具。Python PDF 合页、PPTX 与 YAML 支持均为可选。
 
-[MIT License](LICENSE)
+[MIT License](LICENSE)。江苏样册所用第三方摄影另按各自 CC 许可使用，见其图注与 [图片署名](product-brochure-designer/examples/jiangsu-waterways/sources.md)。

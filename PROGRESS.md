@@ -44,3 +44,17 @@ GitHub 仓库更名为 [haoabcde/ai-design](https://github.com/haoabcde/ai-desig
 - 结构自检现为 30 项，skill 校验通过。使用实际样册从不同工作目录导出 2 页 A4 PDF，验证页序、标题和嵌入像素与原图一致，未重新生成图像。
 
 验证摘要见 [清单导出证据](docs/research/evidence/2026-11-16-booklet-manifest.json)。这次验证针对续作与导出可靠性，没有新增生图质量对照实验。
+
+### HTML 大字排版与江苏旅游样册
+
+用户补充：产品／研学类手册使用 HTML 时，字号要舒适，前端排版要好看；本轮以江苏旅游替代信息较少的南科大作为主示例。只修改 HTML 指导、机制模板与相关示例。
+
+- 新增 [水岸江苏](product-brochure-designer/examples/jiangsu-waterways/brochure.html)，六页完整旅行提案：封面、三城六日日程、南京／扬州／苏州专页、出发与预约指引。附 [可直接查看的 PDF](product-brochure-designer/examples/jiangsu-waterways/brochure.pdf) 与 README 预览。
+- 先查询秦淮区政府、中山陵园管理局、文旅部、博物馆官方资料、苏州市政府及 UNESCO 等内容；路线与五晚住宿分配明确为编辑建议。没有填写商业报价、虚构预订或把临时假期政策写成常规政策。
+- 三张摄影逐项核对 Commons 的原作、作者、CC 许可，在 HTML／PDF 图注和 [来源说明](product-brochure-designer/examples/jiangsu-waterways/sources.md) 中保留署名、许可、裁切与资料摄影说明；不套用仓库代码的 MIT 许可。
+- HTML 手册默认正文改为 A4 14–16pt，非核心图注11–12pt；手机约18–20px，窄屏单列重排。旅游样册实测打印14pt、手机18px。来源、行程与预约信息保持可选中和可修改的 HTML 文字。
+- 模板补充 viewport、大字号与手机重排，保留原六类语义锚点。共享设计参考不再把10–11pt作为通用手册起点；不把新样册的页数或审美变成所有设计的固定要求。
+
+验证：13项 Node 测试、30项结构检查、skill 校验均通过；新样册 delivery 静态检查无错误或警告。浏览器检查1280px桌面、375px手机及640px重排，手机文档宽度等于视口；目录跳转与打印按钮可用。填入实际文字与图片的模板样稿共7页，打印文字无页外溢出，375px时正文18px且无横向溢出。
+
+PDF逐页查看，修复南京深色页的文字继承颜色、总览短行断句。最终6页均为A4，关键文字与页码可提取、链接不指向本地预览服务器；页面边界与页脚间距检查通过。证据见 [验证摘要](docs/research/evidence/2026-11-16-jiangsu-html.json)。这是旅行提案和视觉样册，没有实际订票、实地踏勘或商业印刷打样；出发前仍需重查开放与预约公告。

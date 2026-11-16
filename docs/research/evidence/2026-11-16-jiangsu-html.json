@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-16",
+  "scope": "HTML handbook readability and researched Jiangsu travel proposal",
+  "pdf": {
+    "file": "product-brochure-designer/examples/jiangsu-waterways/brochure.pdf",
+    "pages": [
+      {
+        "page": 1,
+        "footerAndKeyText": true,
+        "sizePt": [
+          594.96,
+          841.92
+        ],
+        "links": 2
+      },
+      {
+        "page": 2,
+        "footerAndKeyText": true,
+        "sizePt": [
+          594.96,
+          841.92
+        ],
+        "links": 0
+      },
+      {
+        "page": 3,
+        "footerAndKeyText": true,
+        "sizePt": [
+          594.96,
+          841.92
+        ],
+        "links": 5
+      },
+      {
+        "page": 4,
+        "footerAndKeyText": true,
+        "sizePt": [
+          594.96,
+          841.92
+        ],
+        "links": 5
+      },
+      {
+        "page": 5,
+        "footerAndKeyText": true,
+        "sizePt": [
+          594.96,
+          841.92
+        ],
+        "links": 5
+      },
+      {
+        "page": 6,
+        "footerAndKeyText": true,
+        "sizePt": [
+          594.96,
+          841.92
+        ],
+        "links": 6
+      }
+    ],
+    "sha256": "f26c68ce56ff3e0276068a649e542d7a892ef6b1de2b2b439669dbbbd326a514",
+    "bytes": 1679450
+  },
+  "browser": {
+    "desktopWidth": 1280,
+    "mobileWidth": 375,
+    "mobileDocumentWidth": 375,
+    "mobileBodyPx": 18,
+    "printBodyPt": 14,
+    "printPageOverflow": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "contentToFooterGapPx": [
+      45,
+      13,
+      61,
+      61,
+      29,
+      17
+    ],
+    "reflowWidth640DocumentWidth": 640,
+    "tocAnchorTopPx": 24,
+    "printButtonInvoked": true,
+    "darkPageText": "rgb(248, 247, 242)"
+  },
+  "template": {
+    "populatedSamplePages": 7,
+    "printTextOutsidePages": 0,
+    "mobileWidth": 375,
+    "mobileDocumentWidth": 375,
+    "mobileBodyPx": 18
+  },
+  "checks": {
+    "nodeTestsPassed": 13,
+    "skillValidator": "pass",
+    "smokeChecksPassed": 30,
+    "htmlDeliveryCheck": "pass; 6 pages, 3 referenced image files, no errors or warnings"
+  },
+  "visualReview": "All six PDF pages and mobile cover/city page reviewed; page 2 reviewed again after final line-break changes. Fixed dark-page inherited ink and short isolated lines.",
+  "limits": [
+    "Travel route and overnight distribution are editorial suggestions, not a tour operator offer.",
+    "No actual bookings, physical travel or commercial print proof.",
+    "Photos are licensed historical/source photography, not real-time weather or crowds.",
+    "Openings and reservations require a pre-departure official recheck."
+  ]
+}
