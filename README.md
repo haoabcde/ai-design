@@ -21,6 +21,8 @@
 
 [水岸江苏 HTML 样册](product-brochure-designer/examples/jiangsu-waterways/brochure.html) · [六页 PDF](product-brochure-designer/examples/jiangsu-waterways/brochure.pdf) · [设计演进](product-brochure-designer/examples/jiangsu-waterways/design/directions.html)：调研南京—扬州—苏州六日路线后，比较实际封面与行程页，用户选择“水线版画”。当前六页以水线贯穿插画和路线，组合实景摄影与可修改文字。正文打印14pt、手机18px；下载该目录即可打开 HTML。[内容来源与素材说明](product-brochure-designer/examples/jiangsu-waterways/sources.md)。
 
+[HTML 内页前后对照](product-brochure-designer/examples/jiangsu-waterways/design/directions.html#html-refinement)：本轮根据 HTML 缺少韵味的反馈，调整三张城市页的叙事、取景和排印节奏；封面继续沿用已选方向。
+
 <img src="product-brochure-designer/examples/jiangsu-waterways/preview-cover.jpg" alt="水岸江苏 HTML 样册封面" width="290"> <img src="product-brochure-designer/examples/jiangsu-waterways/preview-nanjing.jpg" alt="水岸江苏 HTML 样册南京内页" width="290">
 
 其他示例：

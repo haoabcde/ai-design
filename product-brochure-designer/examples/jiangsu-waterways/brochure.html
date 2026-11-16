@@ -16,16 +16,54 @@
 /* 路线页：大字声明与细长行程形成尺度对比，避免六张相同卡片。 */
 .route-title{font:600 43pt/1.18 var(--sans);letter-spacing:-.045em;margin:7mm 0 5mm}.route-title em{font-family:var(--serif);font-style:normal;font-weight:600}.route-grid{display:grid;grid-template-columns:62mm minmax(0,1fr);gap:9mm;margin-top:5mm}.route-summary{border-top:3px solid var(--blue);padding-top:4mm}.route-summary .place{font-size:22pt;font-weight:600;line-height:1.45}.route-summary .arrow{color:var(--blue);font-size:22pt;margin:1mm 0}.route-summary .pace{margin-top:6mm}.route-summary .stay{font-size:14pt;border-top:1px solid var(--line);padding-top:4mm;margin-top:6mm}.day-list{list-style:none;padding:0;border-top:1px solid var(--ink)}.day{display:grid;grid-template-columns:12mm minmax(0,1fr);gap:3mm;padding:3.5mm 0;border-bottom:1px solid var(--line)}.day-no{color:var(--blue);font:500 24pt/1.2 var(--sans);letter-spacing:-.05em}.day h3{font-size:16pt;line-height:1.4;margin-bottom:1mm}.day p{font-size:var(--text);line-height:1.6}.route-note{border-left:3px solid var(--red);padding-left:4mm;margin-top:6mm}
 .route-places{position:relative;height:244px;padding-left:46px}.route-trace{position:absolute;left:0;top:8px;width:40px;height:216px;color:var(--blue);fill:var(--blue)}.route-places .place{position:absolute;left:46px}.route-places .place:nth-of-type(1){top:0}.route-places .place:nth-of-type(2){top:88px}.route-places .place:nth-of-type(3){top:176px}.route-places small{display:block;font-size:12pt;font-weight:400;color:var(--muted);margin-top:2px}
-/* 南京：夜色是主视觉，文字与照片共用一个舞台；正文落在明亮纸面。 */
-.nanjing{padding:0}.night-hero{position:relative;height:126mm;background:#0c1637;color:white}.night-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%}.night-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07112799 0%,transparent 40%,#08142ab3 100%)}.night-top,.night-title{position:relative;z-index:1}.night-top{display:flex;justify-content:space-between;padding:12mm 15mm;font-size:12pt}.night-title{position:absolute;bottom:9mm;left:14mm;right:14mm;display:flex;align-items:end;justify-content:space-between;gap:20px}.night-title h2{font:600 66pt/1.1 var(--sans);letter-spacing:-.05em}.night-title p{font:600 20pt/1.5 var(--serif)}.city-content{padding:5mm 15mm 0}.city-lead{margin:5mm 0}.split-plans{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8mm;margin:5mm 0}.plan{border-top:1px solid var(--ink);padding-top:3mm}.plan h3{font-size:17pt;line-height:1.45;margin:1mm 0 2mm}.plan p{font-size:var(--text);line-height:1.65}.taste{display:grid;grid-template-columns:20mm minmax(0,1fr);gap:4mm;border-top:1px solid var(--line);padding:4mm 0}.taste dt{font-size:12pt;color:var(--red);font-weight:600;padding-top:1mm}.tip{border-left:3px solid var(--blue);padding-left:4mm;font-size:var(--text);line-height:1.65}.nanjing .folio{margin:auto 15mm 9mm}
-/* 扬州：圆形取景像一扇临水的窗，标题竖排，内页沿用蓝色水线。 */
-.yangzhou .running{margin-bottom:6mm}.lake-hero{position:relative;display:grid;grid-template-columns:27mm minmax(0,1fr);gap:5mm;align-items:center;min-height:111mm}.lake-title{writing-mode:vertical-rl;font:600 59pt/1 var(--serif);letter-spacing:.08em}.lake-picture{margin-left:0}.lake-picture img{display:block;width:109mm;height:109mm;border-radius:50%;object-fit:cover;object-position:58% 45%}.lake-caption{position:relative;align-self:flex-end;margin:-14mm 4mm 0 34mm;z-index:1;background:var(--blue);color:white;padding:3mm 5mm;font-size:16pt;line-height:1.5}.yangzhou .city-lead{margin:4mm 0}.yangzhou .split-plans{margin:4mm 0}.yangzhou .taste{padding:3mm 0}.yangzhou .plan p{line-height:1.6}
-/* 苏州：留一张窄长取景，将园林的空间纵深与文字对读。 */
-.garden-hero{display:grid;grid-template-columns:110mm minmax(0,1fr);gap:6mm;margin-top:6mm;align-items:stretch}.garden-picture{position:relative}.garden-picture img{display:block;width:100%;height:105mm;object-fit:cover;object-position:54% 50%}.garden-picture::after{content:"";position:absolute;left:7mm;right:7mm;top:7mm;bottom:7mm;border:1px solid #ffffffe6;pointer-events:none}.garden-heading{display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:3mm 0}.garden-heading h2{writing-mode:vertical-rl;font:600 59pt/1 var(--serif);letter-spacing:.08em}.garden-seal{background:var(--red);color:var(--paper);padding:5mm 2mm;writing-mode:vertical-rl;font-size:14pt;letter-spacing:.12em}.garden-deck{font:600 22pt/1.5 var(--serif);margin-top:5mm}.suzhou .city-lead{margin:4mm 0}.suzhou .split-plans{margin:4mm 0}.suzhou .plan p{line-height:1.6}
+/* 城市内页共享排印，叙事结构随内容变化。 */
+.city-name{font:600 44pt/1.08 var(--sans);letter-spacing:-.045em}
+.city-opener{display:grid;grid-template-columns:54mm minmax(0,1fr);gap:8mm;align-items:start;margin-top:7mm}
+.city-deck{font:500 26pt/1.42 var(--serif);letter-spacing:-.02em}
+.city-figure{margin-top:6mm}.city-figure img{display:block;width:100%;object-fit:cover}
+.city-figure figcaption{font-size:11pt;line-height:1.5;color:var(--muted);margin-top:2mm}
+.city-intro{font-size:var(--text);line-height:1.7;margin-top:5mm}
+.city-day h3{font-size:16pt;line-height:1.4;margin-bottom:1.5mm}.city-day p{font-size:var(--text);line-height:1.6}
+.city-day .city-day-label,.city-day-label{font-size:14pt;line-height:1.5;color:var(--blue);font-weight:500}
+.city-meal{font-size:var(--text);line-height:1.65;margin-top:4mm}.city-meal span{display:inline-block;font-size:12pt;color:var(--red);margin-right:4mm}
+.city-tip{border-top:1px solid var(--line);padding-top:3mm;margin-top:4mm;font-size:var(--text);line-height:1.65}
+/* 南京从灯影进入夜色；行程是连续的两段阅读。 */
+.nanjing{padding:0;background:#121f38;color:var(--paper)}
+.night-hero{position:relative;height:121mm;background:#0c1637;color:white}
+.night-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 62%}
+.night-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#07112780 0%,transparent 42%,#121f38 100%)}
+.night-top{position:relative;z-index:1;display:flex;justify-content:space-between;padding:12mm 15mm;font-size:12pt}
+.night-title{position:absolute;z-index:1;bottom:5mm;left:15mm;right:15mm;display:flex;align-items:end;justify-content:space-between;gap:20px}
+.night-title h2{font-size:66pt}
+.night-deck{font:500 22pt/1.5 var(--serif);padding-bottom:1mm}
+.nanjing-story{padding:2mm 15mm 0}.nanjing .city-intro{margin-top:4mm}
+.night-days{margin-top:5mm}.night-days .city-day{display:grid;grid-template-columns:22mm minmax(0,1fr);gap:6mm;padding:3.5mm 0;border-top:1px solid #ffffff40}
+.night-days .city-day>.city-day-label{color:#e5c19b}.nanjing .city-day p{color:#e2e7f0}.nanjing .city-meal span{color:#e5c19b}
+.nanjing .city-tip{border-color:#ffffff40;color:#d6deec}.nanjing .folio{margin:auto 15mm 9mm;color:#c1cbdd}
+/* 扬州让湖面展开；早茶作为边栏，与两天安排形成不同密度。 */
+.yangzhou .city-name{color:var(--blue)}.lake-spread{width:calc(100% + 15mm)}.lake-spread img{height:88mm;object-position:54% 53%}
+.yangzhou-notes{display:grid;grid-template-columns:1.6fr 1fr;gap:8mm;margin-top:5mm}
+.lake-days .city-day+.city-day{margin-top:4mm}.lake-days .city-day-label{margin-right:3mm}
+.tea-title span{display:inline-block}.tea-note{border-left:1px solid var(--blue);padding-left:7mm}.tea-note .tea-title{font:500 22pt/1.6 var(--serif);color:var(--blue);margin-top:3mm}
+/* 苏州用横向取景保留园林空间，随后把阅读带回具体行程。 */
+.suzhou .city-name{color:var(--blue)}.garden-spread img{height:86mm;object-position:50% 54%}
+.garden-days{margin-top:5mm}.garden-days .city-day{display:grid;grid-template-columns:14mm 52mm minmax(0,1fr);gap:5mm;border-top:1px solid var(--line);padding:4mm 0}
+.garden-day-no{font:500 24pt/1.2 var(--sans);color:var(--blue);font-variant-numeric:tabular-nums;letter-spacing:-.05em}
+.garden-days h3{margin:0}.garden-days h3 span{font-size:14pt;font-weight:400}
 /* 实用页也延续概念：三城色标与竖向阅读路径，而非另起一套 UI。 */
 .prepare-title{font:600 40pt/1.18 var(--sans);letter-spacing:-.045em;margin-top:7mm}.prepare-title .serif{font-family:var(--serif)}.reservations{margin-top:7mm}.reservation{display:grid;grid-template-columns:22mm minmax(0,1fr);gap:5mm;border-top:1px solid var(--ink);padding:4mm 0}.reservation h3{font:600 22pt/1.5 var(--sans);color:var(--blue)}.reservation p{font-size:var(--text);line-height:1.65}.official-link{display:inline-block;color:var(--blue);font-size:12pt;margin:2mm 5mm 0 0;padding:3px 0}.practical{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7mm;border-top:3px solid var(--blue);padding-top:4mm;margin-top:4mm}.practical h3{font-size:17pt;margin-bottom:2mm}
-@page{size:A4 portrait;margin:0}@media print{:root{--text:14pt}html,body{background:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}.reader{display:none}.page{height:297mm;min-height:0;margin:0;box-shadow:none;break-after:page}.page:last-child{break-after:auto}.day,.plan,.reservation,figure{break-inside:avoid}}
-@media screen and (max-width:860px){:root{--text:18px}.reader{margin:20px 16px}.reader-top{flex-wrap:wrap}.reader nav{gap:12px 20px}.reader nav a{min-height:40px}.page{width:calc(100% - 32px);min-height:0;padding:28px 24px 24px;margin:16px auto}.running{font-size:16px}.cover{padding:0;min-height:800px}.cover-top{padding:28px 24px 0;font-size:15px}.six{font-size:52px}.cover-title{font-size:clamp(72px,13vw,100px);margin:24px 0 0 20px}.cover-deck{font-size:18px;margin:14px 0 0 24px}.cover-bottom{font-size:17px;padding:18px 24px;gap:12px;flex-wrap:wrap}.route-title{font-size:44px}.route-grid{grid-template-columns:1fr;gap:24px}.route-summary{display:grid;grid-template-columns:1fr 1fr;gap:16px}.route-places{grid-column:1/-1;height:100px;padding-left:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-bottom:2px solid var(--blue)}.route-trace{display:none}.route-places .place{position:static;padding-top:6px}.route-places small{font-size:15px}.route-summary .place{font-size:24px}.route-summary .arrow{font-size:24px;margin:0}.route-summary .pace,.route-summary .stay{margin-top:0}.day{grid-template-columns:40px 1fr;padding:16px 0}.day h3{font-size:23px}.day-no{font-size:32px}.nanjing{padding:0}.night-hero{height:470px}.night-top{padding:24px;font-size:16px}.night-title{left:24px;right:24px;bottom:30px;display:block}.night-title h2{font-size:76px}.night-title p{font-size:26px;margin-top:12px}.city-content{padding:18px 24px 0}.split-plans,.practical{grid-template-columns:1fr;gap:24px}.plan h3{font-size:23px}.taste{grid-template-columns:1fr;gap:8px}.nanjing .folio{margin:0 24px 24px}.lake-hero{min-height:0;grid-template-columns:44px minmax(0,1fr);gap:16px;margin-top:24px}.lake-title{font-size:54px}.lake-picture img{width:100%;height:auto;aspect-ratio:1;border-radius:50%}.lake-caption{position:static;margin:12px 0 0 60px;font-size:20px;padding:10px 16px}.garden-hero{grid-template-columns:minmax(0,1fr) 64px;gap:16px}.garden-picture img{height:330px}.garden-picture::after{inset:16px}.garden-heading h2{font-size:54px}.garden-seal{font-size:18px;padding:14px 8px}.garden-deck{font-size:28px}.city-lead,.yangzhou .city-lead,.suzhou .city-lead{margin:24px 0}.yangzhou .split-plans,.suzhou .split-plans{margin:24px 0}.prepare-title{font-size:44px}.reservation{grid-template-columns:1fr;gap:10px;padding:20px 0}.reservation h3{font-size:28px}.official-link{min-height:44px;padding:10px 0}.practical h3{font-size:23px}.folio{padding-top:28px}}
+@page{size:A4 portrait;margin:0}@media print{:root{--text:14pt}html,body{background:none;-webkit-print-color-adjust:exact;print-color-adjust:exact}.reader{display:none}.page{height:297mm;min-height:0;margin:0;box-shadow:none;break-after:page}.page:last-child{break-after:auto}.day,.city-day,.reservation,figure{break-inside:avoid}}
+@media screen and (max-width:860px){
+:root{--text:18px}.reader{margin:20px 16px}.reader-top{flex-wrap:wrap}.reader nav{gap:12px 20px}.reader nav a{min-height:40px}
+.page{width:calc(100% - 32px);min-height:0;padding:28px 24px 24px;margin:16px auto}.running{font-size:16px}
+.cover{padding:0;min-height:800px}.cover-top{padding:28px 24px 0;font-size:15px}.six{font-size:52px}.cover-title{font-size:clamp(72px,13vw,100px);margin:24px 0 0 20px}.cover-deck{font-size:18px;margin:14px 0 0 24px}.cover-bottom{font-size:17px;padding:18px 24px;gap:12px;flex-wrap:wrap}
+.route-title{font-size:44px}.route-grid{grid-template-columns:1fr;gap:24px}.route-summary{display:grid;grid-template-columns:1fr 1fr;gap:16px}.route-places{grid-column:1/-1;height:100px;padding-left:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;border-bottom:2px solid var(--blue)}.route-trace{display:none}.route-places .place{position:static;padding-top:6px}.route-places small{font-size:15px}.route-summary .place{font-size:24px}.route-summary .arrow{font-size:24px;margin:0}.route-summary .pace,.route-summary .stay{margin-top:0}.day{grid-template-columns:40px 1fr;padding:16px 0}.day h3{font-size:23px}.day-no{font-size:32px}
+.city-opener{display:block;margin-top:24px}.city-name{font-size:52px}.city-deck{font-size:29px;line-height:1.45;margin-top:16px}.city-figure{margin-top:24px}.city-figure figcaption{font-size:14px;margin-top:10px}.city-intro{margin-top:24px}.city-day h3{font-size:23px}.city-day .city-day-label,.city-day-label{font-size:18px}.city-meal{margin-top:24px}.city-meal span{display:block;font-size:16px;margin:0 0 8px}.city-tip{padding-top:18px;margin-top:24px}
+.nanjing{padding:0}.night-hero{height:440px}.night-top{padding:24px;font-size:16px}.night-title{left:24px;right:24px;bottom:20px;display:block}.night-title h2{font-size:76px}.night-deck{font-size:26px;margin-top:16px}.nanjing-story{padding:0 24px}.nanjing .city-intro{margin-top:24px}.night-days{margin-top:24px}.night-days .city-day{grid-template-columns:1fr;gap:8px;padding:20px 0}.nanjing .folio{margin:0 24px 24px}
+.lake-spread{width:100%}.lake-spread img{height:240px;object-position:54% 50%}.yangzhou-notes{grid-template-columns:1fr;margin-top:24px;gap:28px}.lake-days .city-day+.city-day{margin-top:24px}.tea-note{padding:18px 0 0;border-left:0;border-top:1px solid var(--blue)}.tea-note .tea-title{font-size:27px;margin-top:12px}.tea-title br{display:none}
+.garden-spread img{height:245px;object-position:52% 54%}.garden-days{margin-top:24px}.garden-days .city-day{grid-template-columns:38px minmax(0,1fr);gap:10px 14px;padding:20px 0}.garden-days .city-day>p{grid-column:2}.garden-day-no{font-size:32px}.garden-days h3 br{display:none}.garden-days h3 span{display:block;font-size:18px}
+.practical{grid-template-columns:1fr;gap:24px}.prepare-title{font-size:44px}.reservation{grid-template-columns:1fr;gap:10px;padding:20px 0}.reservation h3{font-size:28px}.official-link{min-height:44px;padding:10px 0}.practical h3{font-size:23px}.folio{padding-top:28px}
+}
 </style>
 </head>
 <body>
@@ -59,32 +97,41 @@
 <footer class="folio"><span>一条水线，串起三种城市性格。</span><span>02 / 06</span></footer>
 </section>
 <section class="page nanjing" id="nanjing" aria-labelledby="nanjing-title">
-<header class="night-hero"><img src="assets/nanjing-qinhuai.jpg" width="1280" height="857" alt="南京夫子庙秦淮河夜景，沿岸灯光倒映在水面。"><div class="night-top"><span>水岸江苏 / 第一站</span><span>第1—2天</span></div><div class="night-title"><h2 id="nanjing-title">南京</h2><p>白天读城，<br>入夜看水。</p></div></header>
-<div class="city-content">
-<p class="city-lead body-copy">秦淮河串起夫子庙、历史街巷与名人故居。老门东的传统民居，把古都的尺度落回到步行与日常。</p>
-<div class="split-plans"><article class="plan"><p class="tag">第1天 / 河岸</p><h3>先把傍晚留给秦淮</h3><p>老门东慢行，再去夫子庙秦淮河一带。想乘船时，另查运营时段与票务。</p></article><article class="plan"><p class="tag">第2天 / 山林或文物</p><h3>一个重点，慢慢看</h3><p>喜欢山林与建筑，去钟山；偏爱文物与展览，预约南京博物院。</p></article></div>
-<dl class="taste"><dt>一口风味</dt><dd class="body-copy">尝一份南京盐水鸭，把街巷里的味道记进旅程。</dd></dl>
-<p class="tip">南京博物院、中山陵分别查看官方预约。钟山各景点的门票与开放要求需分别核对。</p>
-</div><footer class="folio"><span>城与河 / 南京</span><span>03 / 06</span></footer>
+<header class="night-hero"><img src="assets/nanjing-qinhuai.jpg" width="1280" height="857" alt="南京夫子庙秦淮河夜景，沿岸灯光倒映在水面。"><div class="night-top"><span>水岸江苏 / 第一站</span><span>第1—2天</span></div><div class="night-title"><div><h2 class="city-name" id="nanjing-title">南京</h2></div><p class="night-deck">先走街巷，<br>再看灯影。</p></div></header>
+<div class="nanjing-story">
+<p class="city-intro body-copy">老门东的传统民居适合步行细看。到了夫子庙秦淮河一带，再看沿岸建筑、灯光与水上倒影怎样彼此呼应。</p>
+<div class="night-days">
+<article class="city-day"><p class="city-day-label">第1天</p><div><h3>老门东与秦淮河岸</h3><p>沿河走一段；想乘船时，再查当日运营时段与票务。</p></div></article>
+<article class="city-day"><p class="city-day-label">第2天</p><div><h3>钟山 / 南京博物院</h3><p>山林与建筑选钟山，文物与展览选南京博物院。</p></div></article>
+</div>
+<p class="city-meal"><span>街巷一味</span>尝一份南京盐水鸭。</p>
+<p class="city-tip">南京博物院、中山陵分别预约；钟山各景点的门票和开放要求分别核对。</p>
+</div>
+<footer class="folio"><span>城与河 / 南京</span><span>03 / 06</span></footer>
 </section>
 <section class="page yangzhou" id="yangzhou" aria-labelledby="yangzhou-title">
 <header class="running"><span>水岸江苏 / 第二站</span><span class="chapter">第3—4天</span></header>
-<div class="lake-hero"><h2 class="lake-title" id="yangzhou-title">扬州</h2><figure class="lake-picture"><img src="assets/yangzhou-lake.jpg" width="1280" height="853" alt="瘦西湖五亭桥与水面，垂柳和水鸟环绕。"></figure></div>
-<p class="lake-caption">一湖亭桥，一城早茶。</p>
-<p class="city-lead body-copy">瘦西湖串起五亭桥、白塔与二十四桥；中国大运河博物馆，则把“看水”带向水与城市的故事。</p>
-<div class="split-plans"><article class="plan"><p class="tag">第3天 / 湖边</p><h3>留一个下午给亭桥</h3><p>从南京转往扬州，安顿后游瘦西湖。沿湖慢走，按体力选择停留点。</p></article><article class="plan"><p class="tag">第4天 / 运河</p><h3>从早茶到运河故事</h3><p>早茶后按预约参观运博，傍晚去东关街，把脚步放轻。</p></article></div>
-<dl class="taste"><dt>一口风味</dt><dd class="body-copy">一壶茶，配三丁包与烫干丝。让早餐成为旅行的一部分。</dd></dl>
-<p class="tip">运博实名分时预约，通常周一闭馆，法定节假日另看公告。先确定参观日，再安排相邻行程。</p>
+<div class="city-opener"><h2 class="city-name" id="yangzhou-title">扬州</h2><p class="city-deck">看一湖亭桥，<br>坐一桌早茶。</p></div>
+<figure class="city-figure lake-spread"><img src="assets/yangzhou-lake.jpg" width="1280" height="853" alt="瘦西湖五亭桥横在湖面，垂柳与水鸟环绕。"><figcaption>瘦西湖 · 五亭桥</figcaption></figure>
+<p class="city-intro body-copy">沿湖看五亭桥、白塔与二十四桥；次日坐下吃早茶，再去运博看水与城市的故事。</p>
+<div class="yangzhou-notes"><div class="lake-days">
+<article class="city-day"><h3><span class="city-day-label">第3天</span>瘦西湖</h3><p>从南京转往扬州，安顿后留一个下午沿湖游览。</p></article>
+<article class="city-day"><h3><span class="city-day-label">第4天</span>中国大运河博物馆</h3><p>早茶后按预约参观，傍晚去东关街。</p></article>
+</div><aside class="tea-note"><p class="city-day-label">早茶时分</p><p class="tea-title">三丁包，<br>烫干丝，<br><span>再续一壶茶。</span></p></aside></div>
+<p class="city-tip">运博实名分时预约，通常周一闭馆；法定节假日查看当期公告。</p>
 <footer class="folio"><span>湖与运河 / 扬州</span><span>04 / 06</span></footer>
 </section>
 <section class="page suzhou" id="suzhou" aria-labelledby="suzhou-title">
 <header class="running"><span>水岸江苏 / 第三站</span><span class="chapter">第5—6天</span></header>
-<div class="garden-hero"><figure class="garden-picture"><img src="assets/suzhou-garden.jpg" width="1280" height="960" alt="拙政园的亭台、池水与植物；石径沿池展开。"></figure><div class="garden-heading"><h2 id="suzhou-title">苏州</h2><span class="garden-seal">园与巷</span></div></div>
-<h3 class="garden-deck">一座园林里，藏着另一种山水。</h3>
-<p class="city-lead body-copy">池水、山石、植物与建筑，在有限空间里组织山水。看过园林，再去平江路，让风景回到城市日常。</p>
-<div class="split-plans"><article class="plan"><p class="tag">第5天 / 河街</p><h3>把下午交给小巷</h3><p>预留扬州至苏州的交通时间，抵达后在平江路一带慢行。</p></article><article class="plan"><p class="tag">第6天 / 园林或苏博</p><h3>在空间与馆藏间择一</h3><p>选拙政园看空间，或预约苏博本馆；按返程时间调整停留。</p></article></div>
-<dl class="taste"><dt>一口风味</dt><dd class="body-copy">一碗讲究汤水与浇头的苏式面，坐下来，慢慢吃。</dd></dl>
-<p class="tip">苏博本馆免费实名预约，注意与西馆区分；使用官方入口。园林票务与博物馆预约分别核对。</p>
+<div class="city-opener"><h2 class="city-name" id="suzhou-title">苏州</h2><p class="city-deck">园里看山水，<br>巷里看日常。</p></div>
+<figure class="city-figure garden-spread"><img src="assets/suzhou-garden.jpg" width="1280" height="960" alt="拙政园的池水、亭台与植物；石径沿池展开。"><figcaption>拙政园 · 池岸</figcaption></figure>
+<p class="city-intro body-copy">在园里看池水、山石与建筑的关系；在平江路，看河与街巷怎样相连。</p>
+<div class="garden-days">
+<article class="city-day"><span class="garden-day-no" aria-label="第5天">05</span><h3>平江路<br><span>河街漫步</span></h3><p>从扬州抵达后，预留接驳余量，在平江路一带步行。</p></article>
+<article class="city-day"><span class="garden-day-no" aria-label="第6天">06</span><h3>拙政园<br>或苏博本馆</h3><p>按兴趣和预约择一；依据返程班次安排停留。</p></article>
+</div>
+<p class="city-meal"><span>街巷一味</span>一碗苏式面，讲究汤水与浇头。</p>
+<p class="city-tip">苏博本馆免费实名预约，注意与西馆区分，使用官方入口；园林门票另行办理。</p>
 <footer class="folio"><span>园与巷 / 苏州</span><span>05 / 06</span></footer>
 </section>
 <section class="page prepare" id="prepare" aria-labelledby="prepare-title">

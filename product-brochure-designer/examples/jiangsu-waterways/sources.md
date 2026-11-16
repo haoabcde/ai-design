@@ -40,4 +40,6 @@
 
 [设计演进](design/directions.html) 展示第一版与用户已选的“水线版画”，以及当前行程与城市内页。用户认可原对照中的第二张，认为第三张“园窗取景”老土；该方案已撤出当前展示，源稿与两张原型图移至 [探索归档](design/archive/direction-b.html)。
 
+第三轮反馈明确针对 HTML：用户认为排版还缺少韵味，整页生图尚未看过、未作评价。本轮沿用已选封面，重写三张城市内页：南京从夜景展开连续日程，扬州展开湖面并用早茶边栏调整疏密，苏州保留园林的横向空间层次，分别精修换行与手机重排。[同一张苏州内页的前后对照](design/directions.html#html-refinement) 保存了修改前画面，源文件基线为 `212e629`；本轮内页仍待新的审美反馈。
+
 前端设计方法参考 [Anthropic frontend-design](https://github.com/anthropics/skills/blob/main/skills/frontend-design/SKILL.md) 中按主题选择字体、结构表达信息和实际截图自评的做法；没有复制其代码，也没有把该项目的具体审美偏好变成通用规则。

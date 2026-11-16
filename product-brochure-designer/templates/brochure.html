@@ -4,12 +4,13 @@
   ─────────────────────────────────────────────
   本文件演示的是【技术机制】，不是【版式库】。设计判断请依据：
     references/design-system.md（网格/字体/色彩/留白/图像/叙事）
-    references/style-directions.md（6 个风格方向）
+    references/style-directions.md（风格探索）
+    references/html-editorial.md（HTML 编辑、内页节奏与字图细节）
   页序与页面组合只是示例——按产品内容规划叙事弧后自由增删。
 
   用法（AI 按 SKILL.md 执行）：
-  1. 复制本文件为 brochure.html，按 product.json 内容改写每一页。
-  2. 在 <style> 顶部的 CSS 变量中填入你推导的设计 Token（四色槽 + 字体 + 边距）。
+  1. 先按内容设计真实内页，再取用本文件的画布、打印规则或所需语义结构；不要直接填满示例页。
+  2. 在 <style> 顶部按当前视觉方向调整颜色、字体与边距。
   3. 每页是一个 <section class="page">，A4 竖版 210mm × 297mm；页数根据内容决定，不为满足模板凑页。
   4. 图片用本地相对路径；全部 object-fit: cover 等比裁切，绝不变形。
      cover 只保比例、不保构图——每张图用 object-position 指定焦点区域，
@@ -26,7 +27,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{产品名}} · 产品手册</title>
 <style>
-  /* ── 设计 Token：按预设替换以下变量（此处为 editorial / light） ── */
+  /* ── 设计变量：按当前视觉方向调整，以下仅为机制示例 ── */
   :root {
     --bg: #F4F6F8;          /* 页面底色 */
     --ink: #152231;         /* 主文字色 */
