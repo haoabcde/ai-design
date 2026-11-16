@@ -1,0 +1,27 @@
+{
+  "fictional": true,
+  "purpose": "演示单页信息层级与同主题改版，不是真实活动",
+  "audience": "对设计实践感兴趣的公众",
+  "requiredCopy": [
+    "城市设计空间",
+    "OPEN STUDIO",
+    "看见",
+    "设计发生。",
+    "12.05",
+    "14:00—17:00",
+    "开放工作室 · 预约入场",
+    "虚构活动样例 · 时间地点为演示内容"
+  ],
+  "outputs": [
+    {
+      "file": "portrait.html",
+      "width": 1080,
+      "height": 1440
+    },
+    {
+      "file": "landscape.html",
+      "width": 1920,
+      "height": 1080
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "date": "2026-11-16",
+  "tests": {
+    "withOptionalPptx": {
+      "passed": 13,
+      "failed": 0,
+      "skipped": 0
+    },
+    "noNodeModulesCopy": {
+      "passed": 12,
+      "failed": 0,
+      "skipped": 1
+    },
+    "structure": {
+      "ok": true,
+      "checked": 29
+    },
+    "skillValidator": "passed",
+    "frozenLockfileInstall": "passed"
+  },
+  "htmlExamples": [
+    {
+      "path": "product-brochure-designer/examples/open-studio/portrait.png",
+      "pixels": [
+        1080,
+        1440
+      ],
+      "browserViewed": true
+    },
+    {
+      "path": "product-brochure-designer/examples/open-studio/landscape.png",
+      "pixels": [
+        1920,
+        1080
+      ],
+      "browserViewed": true
+    }
+  ],
+  "imageGeneratedBrochure": {
+    "tool": "built-in imagegen",
+    "fictionalConcept": true,
+    "pageCount": 2,
+    "pageSize": "A4",
+    "effectivePpi": 127.6,
+    "pdfSourcePixelsAndOrderVerified": true,
+    "captionEditedWithImagegen": true,
+    "pages": [
+      {
+        "path": "product-brochure-designer/examples/fold-concept/pages/page-01.png",
+        "pixels": [
+          1055,
+          1491
+        ],
+        "sha256": "e2ece4ca98452e4615ef5f72243805dc3667903c5820f437dc04b048d1e2068a",
+        "viewed": true
+      },
+      {
+        "path": "product-brochure-designer/examples/fold-concept/pages/page-02.png",
+        "pixels": [
+          1055,
+          1491
+        ],
+        "sha256": "6b9fdf85be75603aa86f3083959d6235757af4bc1c4e41d6ea556a163a09cdf6",
+        "viewed": true
+      }
+    ]
+  },
+  "htmlBrochure": {
+    "pdfPageCount": 10,
+    "format": "A4 portrait",
+    "pageScreenshots": 10,
+    "selectedTextElementsOutsidePage": 0,
+    "pdfTextCheck": "Expected cover, specifications and closing content matched after Unicode NFKC normalization"
+  },
+  "pdfHelperGuards": [
+    "empty input",
+    "missing image",
+    "corrupt image",
+    "existing output preserved"
+  ],
+  "limits": [
+    "No independent old/new blind visual benchmark",
+    "No competitor runtime comparison",
+    "No long generated-brochure consistency study",
+    "Generated sample is for screen review, not high-resolution print acceptance"
+  ]
+}

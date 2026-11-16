@@ -1,113 +1,78 @@
 ---
 name: product-brochure-designer
-description: Create polished, premium A4 portrait product handbooks (HTML master → PDF, optionally PPTX) from a structured product brief and approved local images, using a world-class design knowledge base instead of hardcoded layouts. Use for product brochures, sales handbooks, study-tour handbooks, program catalogs, and client-facing multi-page product introductions in Codex, Claude Code, WorkBuddy, or another agent environment.
+description: Design static graphics with image generation and editing, including posters, covers, promotional images and multi-page product brochures. Brochures support whole-page image generation or precise HTML layout. Use for composition, typography, visual direction, format adaptation and PNG/PDF delivery while preserving supplied copy, brand assets and facts. Does not cover interactive UI, video or 3D production.
 ---
 
-# Product Brochure Designer — AI 执行手册
+# 平面设计与产品手册
 
-把结构化产品资料和本地图片，制作成高级、杂志级的 A4 竖版产品手册。**知识驱动**：你阅读设计知识库后自己做设计判断，手写 HTML 母版，浏览器渲染目检，导出 PDF（可选 PPTX）。主线**零 npm 依赖**；仅 PPTX 转换需要 `pnpm install`。
+以生图和图像编辑完成有设计意图的画面，也保留精确排版路线。首批支持**单页设计**和**产品手册**；手册可以整页生图，也可以用 HTML 排版。保留 `product-brochure-designer` 名称以兼容已有安装。
 
-## 0. 交付物与路线
+## 1. 理解任务并选择流程
 
-| 交付物 | 来源 | 说明 |
-|---|---|---|
-| `brochure.html` | 你手写（第 3 章流程） | 唯一母版 |
-| PDF | 浏览器打印 HTML | 主交付物 |
-| PPTX | `scripts/html-to-pptx.mjs` | 客户要可编辑源文件时 |
+利用用户提供的文案、素材、参考图和已有项目上下文，确定：用途与读者、希望读者记住或采取的行动、必须保留的内容、尺寸与交付格式。已有信息足够时直接推进；缺少关键事实或无法推断的交付要求时才询问。
 
-## 1. 快速开始
+- **海报、封面、宣传图、Banner、邀请图或已有图改版**：读 [单页设计](references/single-page.md)。
+- **产品手册、宣传册、项目目录**：读 [多页手册](references/brochure.md)。
+- 两者都用 [设计判断](references/design-system.md)；方向不明确或需要探索时再读 [风格方向](references/style-directions.md)。
+- 使用生图／图像编辑时，读 [生图设计](references/image-generation.md)，包括整页设计和多页一致性。
+- 用户只要 prompt、评审或局部修改时，交付其所需结果，不自动扩展为完整设计项目。
 
-1. **product.json**：复制 `examples/sustech-study-tour/product.json` 改写。只填已确认事实，缺失留空（页面写 `【待确认】`）。`audience`（目标读者）务必填写——风格由它决定。
-2. **图片**：按第 2 章工作流收集官方图片，生成 `images.json`。
-3. **设计**：按第 3 章读知识 → 定概念 → 选方向 → 规划页面 → 基于 `templates/brochure.html` 改写。
-4. **交付**：浏览器逐页渲染目检 → `node scripts/check.mjs` → 打印 PDF → 需要时转 PPTX。
+不要把所有请求变成 A4，不强制单页设计填写 product.json，不为增加种类而额外引入流程。复杂信息图、完整品牌识别、摄影精修等若成为任务主体，使用相应专门工具与方法，明确本次可交付范围。
 
-## 2. 图片工作流（官方优先）
+## 2. 做设计判断
 
-Skill 不联网抓图，而是生成搜图指令，你用宿主浏览器工具下载：
+先用一句话明确当前设计意图，例如“远看先注意日期和主题，近看能找到报名方式”。它用来决定层级、图像和节奏，不需要每次都另交长篇设计宣言。
 
-```bash
-node scripts/image-workflow.mjs analyze     --product product.json      # 需要哪些图
-node scripts/image-workflow.mjs source-plan --product product.json      # 官方公众号 → 官网 → 授权图库
-node scripts/image-workflow.mjs manifest    --download-dir ./downloads --output images.json
-```
+- 尊重已有品牌、用户参考和准确文案。不要按人群标签机械分配风格，也不要擅自压暗品牌色。
+- 信息少可以少做页数或用文字主导；信息多先编辑组织，不靠缩小字体塞满。
+- 方向明确就直接完成；需要比较时给有实质区别的少量方向，不固定生成数量。
+- 复用字体、色彩和空间关系，避免把同一构图重复当作所有任务的答案。
 
-- 图片数量不限，但每页最多一张主图，**不强制每页有图**（design-system §5.0）。
-- `manifest` 草稿默认 `status: preview`；交付前人工把合格图标记 `approved` 并设 `sourceType`（`official_wechat`/`official_web`/`licensed` 可交付，其余仅限样稿）。
-- 质量与合规细则：`references/image-policy.md`。
+## 3. 按交付要求制作
 
-## 3. 设计流程（核心）
-
-> 模板只保证技术机制；**设计判断由你做出**。
-
-### 3.1 读设计知识
-
-- `references/design-system.md` — 设计大脑：原则/默认/红线三层（§0 必读）
-- `references/style-directions.md` — 6 个风格方向与选择框架
-
-### 3.2 定概念 → 选方向 → 定 Token
-
-1. **设计概念**（最重要）：一句话写下"读者合上手册时感觉到什么"。之后每个选择都拿它裁决——只执行规则、没有概念的手册，就是"全都类似的风格"的根因。
-2. **风格方向由读者决定，不由产品决定**：按 style-directions 的三问框架（读者 → 目的 → 产品微调）。同一产品给企业版和给青少年家长版，风格必须不同。拿不准用 editorial。
-3. 推导四色槽 + 字体配对，写入 HTML 顶部 CSS 变量（`--bg/--ink/--accent/--overlay/--font-title/--font-body/--margin`）。品牌给了主色就压暗降饱和推导 `--accent`。
-
-### 3.3 规划叙事页
-
-按 design-system §7：先做单产品/多产品目录的形态判断，再做**编辑取舍**（§7.0：砍、并、排序），最后映射到页面。信息量不够就少做页数，不注水。
-
-### 3.4 写 HTML
-
-复制 `templates/brochure.html` 逐页改写（机制见文件头注释）：
-
-- 每页一个 `<section class="page">`；图片一律 `object-fit: cover` + `object-position` 保焦点；文字压图必配渐变遮罩。
-- 保留模板的语义 class（`page-cover`/`page-split`/`page-bleed`/`page-timeline`/`page-specs`/`page-closing`）——它们是 PPTX 转换锚点；自创新版式仅进 PDF。
-- 缺图时：封面/出血页用 overlay 纯色 + 大字标题，分栏页改纯文字版式，并在交付说明中注明。
-
-## 4. 渲染目检与导出
-
-### 4.1 渲染目检（必做）
-
-浏览器打开 `brochure.html` 逐页截图，对照 design-system §8 逐项过：红线（重叠/变形/可读性/事实/合规）+ 设计自检（构图多样性、图片必要性、裁切焦点、字体加载、叙事节奏）。发现问题改 HTML 重渲，直到通过。**没有目检过的手册不算完成。**
-
-### 4.2 安全检查（交付前必跑）
-
-```bash
-node scripts/check.mjs --html brochure.html --product product.json --images images.json
-```
-
-检查内部字段泄露、广告法敏感词（WARNING 级）、遗留 `【待确认】`、图片来源合规。有 ERROR 不得交付。
-
-### 4.3 导出
-
-- **PDF**：浏览器打印——A4、纵向、边距"无"、勾选"背景图形"。模板已内置 `@page` 与打印色彩修正。
-- **PPTX**（可选）：`pnpm install && node scripts/html-to-pptx.mjs --html brochure.html --output <产品名>.pptx`，转换后抽查 2–3 页。
-
-## 5. 交付说明
-
-输出目录写一份 `delivery-notes.md`：设计概念、所选方向与色板、页数计划、图片来源清单（official/preview 各几张）、`【待确认】` 汇总、目检结论，随 PDF 一并交付。
-
-## 6. 故障排除
-
-| 问题 | 处理 |
+| 主要要求 | 制作方式 |
 |---|---|
-| PDF 颜色/背景丢失 | 打印勾选"背景图形"（模板已设 `print-color-adjust: exact`） |
-| 页间白缝 / 页数翻倍 | 打印边距设"无"；打印用 `margin:0` 规则必须在屏幕 `.page` 规则**之后**（CSS 顺序） |
-| 衬线标题变默认黑体 | 系统缺 Noto Serif SC，接受回退或装思源宋体 |
-| PPTX 某页丢失 | 该页是自定义版式（无锚点 class），改用模板 class 或接受 PDF-only |
-| 送印刷厂 | 装订边/CMYK/纸张见 `references/platform-notes.md` |
+| 直接完成海报、封面或整页视觉设计 | 使用宿主可用的生图／图像编辑工具完成整体构图、字图关系与风格；不默认只生成一张背景 |
+| 生图版产品手册 | 按统一视觉简报逐页生成，以已选页面和产品图保持一致，校对后汇总 PDF；见生图设计参考 |
+| 精确长文、价格日期、Logo、参数、稳定修改 | 保留可编辑排版层；可用原生设计工具或 HTML／SVG 排版，必要时组合生成素材 |
+| 修改已有成品 | 保留原图与未修改内容，选择局部编辑或源文件修改；避免无必要地重做整张图 |
 
-## 7. 安全红线
+不能用程序画占位图冒充所需摄影或插画。生成素材与确定性排版可以组合，但不强制所有任务拆层。不得声称栅格图有可编辑文字层，也不得承诺 HTML 自动转换为任意原生设计文件。
 
-1. 不确定的事实写 `【待确认】`，不编造。
-2. 内部字段（成本/渠道/结算/利润/supplier/margin…）必须剥离，不出现在任何页面。
-3. 交付稿只用 `approved` 且官方/授权来源图片；禁止 AI 生成图冒充真实场景。
-4. 文案禁止保证性承诺与绝对化用语（广告法，见 fact-policy.md）。
-5. 人物正脸需授权；未成年人照片优先背影/侧脸/远景（见 image-policy.md）。
-6. 价格、预约、审批等可变动事项注明"以最终确认/现场安排为准"。
+HTML 参考模板只演示画布与导出机制：单页用 `templates/graphic.html`，A4 手册用 `templates/brochure.html`。设计不受模板示例构图限制。
 
-## 参考文档
+## 4. 核对内容与素材
 
-- `references/design-system.md` — 设计系统知识库（先读）
-- `references/style-directions.md` — 6 个风格方向
-- `references/fact-policy.md` / `image-policy.md` / `platform-notes.md`
-- `templates/brochure.html` — A4 技术机制参考模板
+- 已提供的标题、日期、价格、参数、Logo 和联系方式逐项核对；不编造证明、数据、背书或真实场景。
+- 缺失事实在草稿中标明，正式交付前补齐或取得用户明确的草稿交付要求。
+- 确认素材授权范围。客户素材、官方来源、授权图库及说明性生成图分别记录；公开可见不等于获准使用。细则见 [素材说明](references/image-policy.md)。
+- 商业资料含内部信息或宣传措辞待审时，读 [事实与内部信息](references/fact-policy.md)。不要把内部资料放进客户输出。
+
+HTML 使用本地图片时，可生成待审核清单（从 skill 目录执行）：
+
+```bash
+node scripts/image-workflow.mjs manifest --download-dir ./downloads --output images.json
+```
+
+路径相对清单文件；清单初始为 `preview`，审核后填写 `sourceType`、`rights` 和相应来源信息。脚本不抓图，也不会自动认定授权。
+
+## 5. 渲染、复核与交付
+
+**必须查看实际成品。** 用浏览器／设计工具渲染，等待字体与图片加载，核对画布边界、溢出、主体裁切、文字准确性和实际阅读尺寸。多页逐页看，再整体看一致性与节奏；改尺寸后重新检查内容重排。
+
+HTML 交付前运行：
+
+```bash
+node scripts/check.mjs --html design.html --images images.json
+# 产品手册可再提供 --product product.json；无图片时可省略 --images
+# 草稿加 --mode draft：允许待确认内容，但仍报告缺图等错误
+```
+
+检查器只检查静态 HTML、素材引用和部分文案线索，不能证明视觉质量、事实或授权合法性；PNG／PDF 与生图结果仍需实际核对。无 ERROR 才能称通过该检查。
+
+- **单页**：按目标尺寸交付 PNG；印刷需求另核对物理尺寸、PDF 与出血要求。
+- **手册**：PDF 为主。HTML 版保存 HTML 与本地素材；生图版保存逐页原图、页序与关键提示词。可编辑 PPTX 仅支持 HTML 路线的已定义语义版式，见 [多页手册](references/brochure.md)。
+- 说明最终文件、关键设计选择、已做核查及实际遗留问题。简单单图无需额外文档；多页或成套交付可写简短 `delivery-notes.md`。
+- 不能渲染或无法核对最终文件时，明确标为未验证草稿，不称完成交付。
+
+导出、字体和平台环境见 [平台说明](references/platform-notes.md)。

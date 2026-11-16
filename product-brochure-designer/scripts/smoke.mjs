@@ -13,12 +13,18 @@ const REQUIRED = [
   'SKILL.md',
   'references/design-system.md',
   'references/style-directions.md',
+  'references/single-page.md',
+  'references/brochure.md',
+  'references/image-generation.md',
   'references/fact-policy.md',
   'references/image-policy.md',
   'templates/brochure.html',
+  'templates/graphic.html',
   'scripts/image-workflow.mjs',
   'scripts/html-to-pptx.mjs',
   'scripts/check.mjs',
+  'scripts/lib/html.mjs',
+  'scripts/images-to-pdf.py',
   'schemas/product.schema.json',
 ];
 

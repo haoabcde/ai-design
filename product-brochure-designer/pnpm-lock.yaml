@@ -7,7 +7,7 @@ settings:
 importers:
 
   .:
-    dependencies:
+    optionalDependencies:
       pptxgenjs:
         specifier: ^3.12.0
         version: 3.12.0
@@ -86,20 +86,27 @@ snapshots:
   '@types/node@18.19.130':
     dependencies:
       undici-types: 5.26.5
+    optional: true
 
-  core-util-is@1.0.3: {}
+  core-util-is@1.0.3:
+    optional: true
 
-  https@1.0.0: {}
+  https@1.0.0:
+    optional: true
 
   image-size@1.2.1:
     dependencies:
       queue: 6.0.2
+    optional: true
 
-  immediate@3.0.6: {}
+  immediate@3.0.6:
+    optional: true
 
-  inherits@2.0.4: {}
+  inherits@2.0.4:
+    optional: true
 
-  isarray@1.0.0: {}
+  isarray@1.0.0:
+    optional: true
 
   jszip@3.10.1:
     dependencies:
@@ -107,12 +114,15 @@ snapshots:
       pako: 1.0.11
       readable-stream: 2.3.8
       setimmediate: 1.0.5
+    optional: true
 
   lie@3.3.0:
     dependencies:
       immediate: 3.0.6
+    optional: true
 
-  pako@1.0.11: {}
+  pako@1.0.11:
+    optional: true
 
   pptxgenjs@3.12.0:
     dependencies:
@@ -120,12 +130,15 @@ snapshots:
       https: 1.0.0
       image-size: 1.2.1
       jszip: 3.10.1
+    optional: true
 
-  process-nextick-args@2.0.1: {}
+  process-nextick-args@2.0.1:
+    optional: true
 
   queue@6.0.2:
     dependencies:
       inherits: 2.0.4
+    optional: true
 
   readable-stream@2.3.8:
     dependencies:
@@ -136,17 +149,24 @@ snapshots:
       safe-buffer: 5.1.2
       string_decoder: 1.1.1
       util-deprecate: 1.0.2
+    optional: true
 
-  safe-buffer@5.1.2: {}
+  safe-buffer@5.1.2:
+    optional: true
 
-  setimmediate@1.0.5: {}
+  setimmediate@1.0.5:
+    optional: true
 
   string_decoder@1.1.1:
     dependencies:
       safe-buffer: 5.1.2
+    optional: true
 
-  undici-types@5.26.5: {}
+  undici-types@5.26.5:
+    optional: true
 
-  util-deprecate@1.0.2: {}
+  util-deprecate@1.0.2:
+    optional: true
 
-  yaml@2.9.0: {}
+  yaml@2.9.0:
+    optional: true

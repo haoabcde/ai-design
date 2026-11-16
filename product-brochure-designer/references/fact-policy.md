@@ -1,31 +1,17 @@
-# Fact policy
+# 事实、内部信息与文案
 
-Use provided product files as the source of project commitments. Official public background may describe an institution or brand, but never proves that a visitor can enter a space, receive a course, use a facility, meet a person, or obtain a certificate.
+使用已确认的名称、规格、日期、价格、联系人和证明资料。可以编辑表达与组织顺序，不能改动必须精确的信息，不能编造数据、背书、合作关系或效果。
 
-When a public fact is missing, write `【待确认】` in the output copy. Do not place costs, margins, channel prices, supplier contacts, internal notes, or private arrangements in client-facing output.
+缺失内容在草稿中标明 `【待确认…】`；正式交付前补齐或由用户明确接受草稿状态。`check.mjs` 默认 delivery 模式把待确认项与模板占位作为错误，draft 模式将它们列为警告。
 
-## Fields treated as internal
+## 内部资料
 
-Keys or values matching the pattern `(成本|分销|渠道|结算|利润|内部|底价|supplier|margin|cost|wholesale|internal)` are stripped during normalization. Examples that must stay out of the deck:
+客户交付内容与输出旁的 JSON、HTML 源文件同样可能泄露内部资料。先人工整理出可公开使用的信息，再生成作品；没有自动脱敏或事实补全流程。
 
-- cost, margin, wholesale price, supplier contact
-- 成本、底价、内部结算、渠道返点
-- unverified partnership, guaranteed outcome, official endorsement without evidence
+检查器用关键词寻找可能的成本、利润、供应商、结算等线索，只是保守的文本筛查。命中时检查上下文与实际交付范围；它不理解一项数据是否真的保密，也无法自动发现所有敏感内容。不要为了通过检查编造替代信息。
 
-## Using derived value
+## 宣传措辞
 
-Derived education or product value may be used only as a non-guaranteed benefit, and should be phrased cautiously (e.g., “有助于…”“可作为…参考”).
+“保过”“保证录取”“最好”“100%”等容易涉及缺乏依据的承诺或绝对化表达。用真实、可核验的事实说明价值，不把可能性写成保证。
 
-## Marking gaps
-
-Required facts `name` and `description` are automatically replaced with `【待确认】` when empty. Any other field the team cannot confirm should also be marked `【待确认】` in the product file rather than invented.
-
-## Advertising compliance (宣传合规)
-
-《广告法》对教育、培训、招商等场景的宣传用语有硬性限制。手册文案**禁止**出现：
-
-- 保证性承诺：保过、包过、确保录取/升学/通过、承诺效果、100%、百分百
-- 绝对化用语：最好、最优、顶级、第一品牌、国家级（无依据时）、权威认证（无依据时）
-- 虚构背书：未经证实的"官方指定""独家合作""名校直通"
-
-替代表达：用可验证的事实代替形容词（"累计服务 3000 名学生"优于"最受欢迎"），用"有助于/可作为参考"代替保证。`scripts/check.mjs` 会对最终 HTML 做敏感词扫描（WARNING 级），命中项需人工逐条确认。
+脚本将相关命中报告为 WARNING，需结合语境审阅；命中不等于违法，未命中也不证明合规。发布所需的法律判断应按实际用途与现行要求处理。
