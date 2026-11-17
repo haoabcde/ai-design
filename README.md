@@ -15,6 +15,12 @@
 
 ## 已跑通的示例
 
+[水岸江苏全生图作品](product-brochure-designer/examples/jiangsu-imagegen/index.html) · [四页 PDF](product-brochure-designer/examples/jiangsu-imagegen/brochure.pdf) · [海报原图](product-brochure-designer/examples/jiangsu-imagegen/poster/poster.png)：沿用同一份旅游调研，分别完成独立海报和精简路线手册。文字、插画与排版全部由生图完成，PDF 仅等比嵌入原图。先试有真实正文的内页，再延展全册；苏州页经历一次实际构图重排，保留字体与材料，改为左文右景，避免整套重复同一模板。[设计依据、准确文案与逐图提示词](product-brochure-designer/examples/jiangsu-imagegen/brief.md)。
+
+<img src="product-brochure-designer/examples/jiangsu-imagegen/poster/poster.png" alt="全生图水岸江苏海报" width="290"> <img src="product-brochure-designer/examples/jiangsu-imagegen/pages/page-04.png" alt="全生图苏州阅读内页，左文右景" width="290">
+
+本组手册原图1055×1491，A4有效分辨率约127.6ppi，为屏幕放大审阅版；固定栅格页面没有可编辑文字或手机重排。已核对逐图文字与最终 PDF 原图像素，但不以此代替用户的审美评价。
+
 [折光 FOLD 生图样册](product-brochure-designer/examples/fold-concept/prompts.md)：两页整体生图，第二页参考第一页延续产品与风格，并用局部编辑修正图注。概念产品明确标注为非实物；保存原图与提示词，可复现 PDF 合页。
 
 <img src="product-brochure-designer/examples/fold-concept/pages/page-01.png" alt="生图样册封面" width="290"> <img src="product-brochure-designer/examples/fold-concept/pages/page-02.png" alt="生图样册内页" width="290">

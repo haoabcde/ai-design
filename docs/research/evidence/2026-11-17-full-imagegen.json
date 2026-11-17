@@ -1,0 +1,283 @@
+{
+  "date": "2026-11-17",
+  "baselineCommit": "7bb106b79a878297eaee733d02e357231e1d7296",
+  "scope": "全生图海报与精简产品手册；保留原HTML成品",
+  "userDirection": "认可日光版后转向全生图；学习设计思路，不固定风格菜单；不加无关署名和免责声明；正文易读",
+  "production": {
+    "tool": "built-in image_gen",
+    "calls": 6,
+    "finalGraphics": 5,
+    "allFinalTypographyAndArtworkGeneratedTogether": true,
+    "cliOrApiFallbackUsed": false,
+    "programmaticImageEditingUsed": false,
+    "htmlRole": "original-image viewer only"
+  },
+  "sampleRoot": "product-brochure-designer/examples/jiangsu-imagegen",
+  "provenance": [
+    {
+      "output": "poster/poster.png",
+      "prompt": "prompts/poster.md",
+      "referencesInCallOrder": [
+        {
+          "path": "../jiangsu-waterways/assets/river-daylight.png",
+          "role": "daylight-color-and-illustration-reference"
+        }
+      ],
+      "nativeOutputFilename": "exec-d0849eba-7045-4a50-8b8f-51e27604ec82.png",
+      "workspaceFileEqualsNativeOutput": true,
+      "pixels": [
+        1086,
+        1448
+      ],
+      "sha256": "1ab9a3851453c0ee9016cac4358c9088bc1746f56d851e46a8a07943228fb7fa"
+    },
+    {
+      "output": "pages/page-02.png",
+      "prompt": "prompts/page-02.md",
+      "referencesInCallOrder": [
+        {
+          "path": "poster/poster.png",
+          "role": "campaign-visual-language"
+        }
+      ],
+      "nativeOutputFilename": "exec-fcf4a2d2-c9e3-428c-a082-61059a80436a.png",
+      "workspaceFileEqualsNativeOutput": true,
+      "pixels": [
+        1055,
+        1491
+      ],
+      "sha256": "90c9303e8c64331f4f53b0d96e31b1b3cbfe6f702826b9539810084f26958180"
+    },
+    {
+      "output": "pages/page-01.png",
+      "prompt": "prompts/page-01.md",
+      "referencesInCallOrder": [
+        {
+          "path": "poster/poster.png",
+          "role": "campaign-visual-language"
+        },
+        {
+          "path": "pages/page-02.png",
+          "role": "type-margin-and-detail-family"
+        }
+      ],
+      "nativeOutputFilename": "exec-8b1fedc7-fd01-4722-bd5a-10d076346aad.png",
+      "workspaceFileEqualsNativeOutput": true,
+      "pixels": [
+        1055,
+        1491
+      ],
+      "sha256": "b6663769c21b8ecd93fa78f54da42df576b5a5cada23a2897195e1e44620eb6b"
+    },
+    {
+      "output": "pages/page-03.png",
+      "prompt": "prompts/page-03.md",
+      "referencesInCallOrder": [
+        {
+          "path": "pages/page-02.png",
+          "role": "stable-reading-page-anchor"
+        },
+        {
+          "path": "poster/poster.png",
+          "role": "secondary-daylight-and-color-anchor"
+        }
+      ],
+      "nativeOutputFilename": "exec-d339be4a-4c5a-4b13-af5f-2445bac6fd8f.png",
+      "workspaceFileEqualsNativeOutput": true,
+      "pixels": [
+        1055,
+        1491
+      ],
+      "sha256": "79232a5f1787d5b34ac224b21581d5651477e8880d5a6a18d2b7347422253dcd"
+    },
+    {
+      "output": "design/page-04-before.png",
+      "prompt": "prompts/page-04.md",
+      "referencesInCallOrder": [
+        {
+          "path": "pages/page-02.png",
+          "role": "stable-reading-page-anchor"
+        },
+        {
+          "path": "poster/poster.png",
+          "role": "secondary-daylight-and-color-anchor"
+        }
+      ],
+      "nativeOutputFilename": "exec-b06a38ac-bec2-40ff-9baf-b53517391509.png",
+      "workspaceFileEqualsNativeOutput": true,
+      "pixels": [
+        1055,
+        1491
+      ],
+      "sha256": "7695bc9223173579a9714ac36a95bac5d49d82f24ea8a67b6dc7753396e88a50"
+    },
+    {
+      "output": "pages/page-04.png",
+      "prompt": "prompts/page-04-reflow.md",
+      "referencesInCallOrder": [
+        {
+          "path": "design/page-04-before.png",
+          "role": "edit-target-for-layout-reflow"
+        }
+      ],
+      "nativeOutputFilename": "exec-55a1b1dd-1203-4f41-8770-d5116e0bc250.png",
+      "workspaceFileEqualsNativeOutput": true,
+      "pixels": [
+        1055,
+        1491
+      ],
+      "sha256": "00c57752fc634628ff2f8a646096dee7d48bdd7e4d1493f94aaf8d976b3424e7"
+    }
+  ],
+  "actualRevision": {
+    "page": "pages/page-04.png",
+    "before": "design/page-04-before.png",
+    "problem": "初稿过度沿用上图下文结构，提示词中的不同构图未落实",
+    "change": "一次图像编辑，改成左文右景，保持全部文案与视觉身份",
+    "prompt": "prompts/page-04-reflow.md"
+  },
+  "contentReview": {
+    "expectedStrings": 50,
+    "ocrMatchedStringsAfterRemovingPunctuationAndWhitespace": 47,
+    "ocrEngine": "Apple Vision accurate zh-Hans/en-US; language correction disabled",
+    "allFinalImagesVisuallyInspected": true,
+    "allRequiredCopyVisuallyChecked": true,
+    "manualOcrExceptions": [
+      {
+        "file": "pages/page-01.png",
+        "expected": "水岸江苏",
+        "ocr": "水岸 / 左苏",
+        "finding": "回看实际江字，标题正确；装饰字形OCR误识"
+      },
+      {
+        "file": "pages/page-01.png",
+        "expected": "南京—扬州—苏州",
+        "ocr": "南京一扬州一苏州",
+        "finding": "回看实际横向分隔线，未把OCR识别成一字当作生成错字"
+      },
+      {
+        "file": "pages/page-03.png",
+        "expected": "一份早茶的闲适",
+        "ocr": "一份早茶闲适",
+        "finding": "原图与PDF渲染回看，的字实际存在，OCR漏识"
+      }
+    ],
+    "notAnOcrAccuracyBenchmark": true
+  },
+  "pdf": {
+    "pages": 4,
+    "pdfBytes": 16867732,
+    "pdfSha256": "89100e78aa9b76209092523fd8af7e44b9cbc848d8ffced0db174ca1164741e1",
+    "pageChecks": [
+      {
+        "page": 1,
+        "mediaBox": [
+          0.0,
+          0.0,
+          595.2756,
+          841.8898
+        ],
+        "embeddedPixels": [
+          1055,
+          1491
+        ],
+        "decodedPixelsEqualOriginal": true,
+        "textLayer": false
+      },
+      {
+        "page": 2,
+        "mediaBox": [
+          0.0,
+          0.0,
+          595.2756,
+          841.8898
+        ],
+        "embeddedPixels": [
+          1055,
+          1491
+        ],
+        "decodedPixelsEqualOriginal": true,
+        "textLayer": false
+      },
+      {
+        "page": 3,
+        "mediaBox": [
+          0.0,
+          0.0,
+          595.2756,
+          841.8898
+        ],
+        "embeddedPixels": [
+          1055,
+          1491
+        ],
+        "decodedPixelsEqualOriginal": true,
+        "textLayer": false
+      },
+      {
+        "page": 4,
+        "mediaBox": [
+          0.0,
+          0.0,
+          595.2756,
+          841.8898
+        ],
+        "embeddedPixels": [
+          1055,
+          1491
+        ],
+        "decodedPixelsEqualOriginal": true,
+        "textLayer": false
+      }
+    ],
+    "canonicalOutput": "output/pdf/jiangsu-full-imagegen-booklet.pdf",
+    "portableCopy": "product-brochure-designer/examples/jiangsu-imagegen/brochure.pdf",
+    "effectivePpi": 127.6,
+    "paddingPointsPerPage": [
+      0.0,
+      0.302
+    ],
+    "allFourFinalPdfRendersViewed": true
+  },
+  "viewer": {
+    "desktop": {
+      "viewportWidth": 1600,
+      "documentWidth": 1600,
+      "loadedImages": 7,
+      "bookletPages": 4
+    },
+    "mobile": {
+      "viewportWidth": 375,
+      "documentWidth": 375,
+      "loadedImages": 7,
+      "bookletPages": 4
+    },
+    "all11LocalArtifactLinksReturned200": true,
+    "reviewScreenshots": [
+      "output/playwright/jiangsu-full-imagegen-overview.png",
+      "output/playwright/jiangsu-full-imagegen-reflow.png",
+      "output/playwright/jiangsu-full-imagegen-mobile-viewer.png"
+    ],
+    "screenshotsViewed": true,
+    "rasterBodyReflowsOnMobile": false
+  },
+  "checks": {
+    "skillValidation": "passed",
+    "structuralSmoke": {
+      "passed": 30
+    },
+    "diffWhitespace": "passed",
+    "scriptImplementationChanged": false,
+    "originalHtmlExampleChanged": false
+  },
+  "limitations": [
+    "单组实际试作，不是跨题材、长手册或生成稳定性评测",
+    "手册原图1055×1491，A4约127.6ppi，供屏幕放大审阅",
+    "文字为栅格，不可编辑、不可搜索且无响应式重排",
+    "本轮样稿审美仍待用户反馈"
+  ],
+  "acceptance": {
+    "previousDaylightHtml": "accepted by user at start of this turn",
+    "thisImagegenBatch": "pending user feedback"
+  }
+}

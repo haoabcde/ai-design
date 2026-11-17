@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>水岸江苏 · 海报与手册</title>
+  <style>
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f4f0e6;color:#343b32;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}main{max-width:1500px;margin:auto;padding:42px 32px 64px}header{display:flex;align-items:end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:36px}h1{font-family:"Songti SC",serif;font-size:clamp(32px,5vw,54px);line-height:1.2;margin:8px 0}h2{font-family:"Songti SC",serif;font-size:30px;margin:0 0 16px}p{margin:10px 0 16px}a{color:#465f48;text-underline-offset:4px}nav{display:flex;gap:20px;flex-wrap:wrap}.intro{color:#64705e}.poster-stage{display:grid;grid-template-columns:minmax(0,520px) minmax(220px,1fr);gap:48px;align-items:center;margin-bottom:64px}img{display:block;width:100%;height:auto}figure{margin:0;min-width:0}figure>a{display:block;box-shadow:0 10px 30px #26332212}figcaption{padding:12px 0;font-size:16px}.poster-notes{max-width:480px}.booklet-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.revision{margin-top:64px}.revision-grid{max-width:1080px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.links{margin-top:42px;padding-top:22px;border-top:1px solid #d6d7cc;display:flex;gap:24px;flex-wrap:wrap}.subtle{color:#64705e;font-size:15px}@media(max-width:1000px){.booklet-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.poster-stage{gap:28px;grid-template-columns:minmax(0,1fr) minmax(220px,.7fr)}}@media(max-width:600px){main{padding:24px 18px 42px}header{align-items:start}.poster-stage,.booklet-grid,.revision-grid{grid-template-columns:1fr}.poster-stage{gap:10px;margin-bottom:44px}h2{font-size:26px}.revision{margin-top:44px}nav{gap:16px}.subtle{font-size:14px}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div><div class="intro">海报与四页手册</div><h1>水岸江苏</h1></div>
+    <nav aria-label="作品导航"><a href="#poster">海报</a><a href="#booklet">手册</a><a href="brochure.pdf">打开 PDF</a></nav>
+  </header>
+  <section id="poster" class="poster-stage" aria-labelledby="poster-title">
+    <figure><a href="poster/poster.png"><img src="poster/poster.png" width="1086" height="1448" alt="水岸江苏竖版海报，水线串起三城插画与大标题"></a><figcaption>海报 · 点击放大原图</figcaption></figure>
+    <div class="poster-notes"><h2 id="poster-title">一条水线，串起三城</h2><p>海报先建立记忆点，手册再展开旅行节奏。文字、插画与排版均由整页生图完成。</p><p><a href="#booklet">查看四页手册 ↓</a></p><p class="subtle">此页只用于浏览原图，未叠加文字或重新排版作品。手册为固定栅格页面，连续正文可点击原图或在 PDF 中放大阅读。</p></div>
+  </section>
+  <section id="booklet" aria-labelledby="booklet-title">
+    <h2 id="booklet-title">从秦淮夜色，走到园林晨光</h2>
+    <p><a href="brochure.pdf">打开四页 PDF</a> · 点击任一页面查看原图</p>
+    <div class="booklet-grid">
+      <figure><a href="pages/page-01.png"><img src="pages/page-01.png" width="1055" height="1491" alt="第1页，水岸江苏封面"></a><figcaption>01 · 开篇</figcaption></figure>
+      <figure><a href="pages/page-02.png"><img src="pages/page-02.png" width="1055" height="1491" alt="第2页，南京第1至2天路线"></a><figcaption>02 · 南京</figcaption></figure>
+      <figure><a href="pages/page-03.png"><img src="pages/page-03.png" width="1055" height="1491" alt="第3页，扬州第3至4天路线与早茶"></a><figcaption>03 · 扬州</figcaption></figure>
+      <figure><a href="pages/page-04.png"><img src="pages/page-04.png" width="1055" height="1491" alt="第4页，苏州第5至6天路线，左文右侧园林框景"></a><figcaption>04 · 苏州</figcaption></figure>
+    </div>
+  </section>
+  <section id="revision" class="revision" aria-labelledby="revision-title">
+    <h2 id="revision-title">同一页的构图修订</h2>
+    <p>初稿沿用了其他城市页的上下结构。修订后保留文案、字体气质与插画材料，将日程移到左侧连续阅读，园林在右侧形成纵深。</p>
+    <div class="revision-grid">
+      <figure><a href="design/page-04-before.png"><img src="design/page-04-before.png" width="1055" height="1491" alt="苏州页初稿，上图下文的构图"></a><figcaption>修订前</figcaption></figure>
+      <figure><a href="pages/page-04.png"><img src="pages/page-04.png" width="1055" height="1491" alt="苏州页修订后，左文右景的构图"></a><figcaption>修订后</figcaption></figure>
+    </div>
+  </section>
+  <footer class="links"><a href="brief.md">设计依据</a><a href="sources.md">内容与制作记录</a><a href="prompts/page-04-reflow.md">构图修订提示词</a><a href="../jiangsu-waterways/brochure.html">六页 HTML 版</a></footer>
+</main>
+</body>
+</html>

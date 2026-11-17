@@ -1,0 +1,63 @@
+{
+  "title": "水岸江苏 · 全生图精简路线手册",
+  "pageSize": "A4",
+  "brief": "brief.md",
+  "pages": [
+    {
+      "id": "cover",
+      "image": "pages/page-01.png",
+      "prompt": "prompts/page-01.md",
+      "status": "reviewed",
+      "references": [
+        {
+          "path": "poster/poster.png",
+          "role": "campaign-visual-language"
+        },
+        {
+          "path": "pages/page-02.png",
+          "role": "type-margin-and-detail-family"
+        }
+      ]
+    },
+    {
+      "id": "nanjing",
+      "image": "pages/page-02.png",
+      "prompt": "prompts/page-02.md",
+      "status": "reviewed",
+      "references": [
+        {
+          "path": "poster/poster.png",
+          "role": "campaign-visual-language"
+        }
+      ]
+    },
+    {
+      "id": "yangzhou",
+      "image": "pages/page-03.png",
+      "prompt": "prompts/page-03.md",
+      "status": "reviewed",
+      "references": [
+        {
+          "path": "pages/page-02.png",
+          "role": "stable-reading-page-anchor"
+        },
+        {
+          "path": "poster/poster.png",
+          "role": "secondary-daylight-and-color-anchor"
+        }
+      ]
+    },
+    {
+      "id": "suzhou",
+      "image": "pages/page-04.png",
+      "prompt": "prompts/page-04-reflow.md",
+      "status": "reviewed",
+      "references": [
+        {
+          "path": "design/page-04-before.png",
+          "role": "edit-target-for-layout-reflow"
+        }
+      ]
+    }
+  ]
+}
