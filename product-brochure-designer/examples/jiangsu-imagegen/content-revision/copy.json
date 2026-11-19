@@ -1,0 +1,35 @@
+{
+  "source": "../../jiangsu-waterways/product.json",
+  "poster": {
+    "brand": "水岸江苏",
+    "headline": "六天，慢看三座城",
+    "chapters": [
+      {"city": "南京", "days": "第1—2天", "experience": "秦淮夜色与老城街巷"},
+      {"city": "扬州", "days": "第3—4天", "experience": "瘦西湖、早茶与运河"},
+      {"city": "苏州", "days": "第5—6天", "experience": "平江河街与园林"}
+    ],
+    "stayHeading": "住宿建议",
+    "stays": "南京2晚 · 扬州2晚 · 苏州1晚"
+  },
+  "route": {
+    "brand": "水岸江苏",
+    "headline": "三城六日，怎么安排",
+    "subtitle": "参考行程 · 6天5晚",
+    "sequence": ["南京", "扬州", "苏州"],
+    "stayHeading": "建议住宿",
+    "stayLabels": ["南京2晚", "扬州2晚", "苏州1晚"],
+    "columns": ["天数", "当天安排", "当晚住宿"],
+    "rows": [
+      {"day": "第1天", "place": "南京抵达", "activity": "老门东 → 秦淮河", "stay": "南京"},
+      {"day": "第2天", "place": "南京", "activity": "钟山 或 南京博物院", "stay": "南京"},
+      {"day": "第3天", "place": "南京 → 扬州", "activity": "预留交通，再游瘦西湖", "stay": "扬州"},
+      {"day": "第4天", "place": "扬州", "activity": "早茶 → 中国大运河博物馆 → 东关街", "stay": "扬州"},
+      {"day": "第5天", "place": "扬州 → 苏州", "activity": "预留交通，再逛平江路", "stay": "苏州"},
+      {"day": "第6天", "place": "苏州 → 返程", "activity": "拙政园 或 苏州博物馆本馆", "stay": "返程"}
+    ],
+    "choicesHeading": "两组择一",
+    "choicesNote": "第2、6天的两项各择一，不排成同日连游。",
+    "beforeHeading": "出发前",
+    "beforeNotes": ["第3、5天预留跨城交通与接驳时间。", "先核对场馆预约，再确定当天重点。"]
+  }
+}

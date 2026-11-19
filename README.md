@@ -2,7 +2,7 @@
 
 结合生图与图像编辑能力的静态平面设计 Skill：制作海报、封面、宣传图，也支持 **HTML 排版版／生图视觉版**产品手册。
 
-从内容中形成可见的设计概念，再完成构图、字图关系与细节。方向开放时先做关键画面对照，让概念进入封面和真实内容页；以实际成品修订，而不把技术检查通过当作设计质量通过。仓库原名 `product-brochure-designer`；skill 调用名与内层目录暂时保留以兼容已有安装。可用于具备相应工具的 Codex、Claude Code 等 Agent 环境。
+先从读者任务编辑内容，把主张、顺序、差异、选择与条件转成可读的视觉关系，再形成构图、排字、图像与气质。方向开放时用真实内容关键页验证；既不以装饰替代内容，也不以信息齐全代替设计。仓库原名 `product-brochure-designer`；skill 调用名与内层目录暂时保留以兼容已有安装。可用于具备相应工具的 Codex、Claude Code 等 Agent 环境。
 
 ## 两类任务，两种制作方式
 
@@ -15,7 +15,11 @@
 
 ## 已跑通的示例
 
-[水岸江苏全生图作品](product-brochure-designer/examples/jiangsu-imagegen/index.html) · [四页 PDF](product-brochure-designer/examples/jiangsu-imagegen/brochure.pdf) · [海报原图](product-brochure-designer/examples/jiangsu-imagegen/poster/poster.png)：沿用同一份旅游调研，分别完成独立海报和精简路线手册。文字、插画与排版全部由生图完成，PDF 仅等比嵌入原图。先试有真实正文的内页，再延展全册；苏州页经历一次实际构图重排，保留字体与材料，改为左文右景，避免整套重复同一模板。[设计依据、准确文案与逐图提示词](product-brochure-designer/examples/jiangsu-imagegen/brief.md)。
+[江苏内容修订](product-brochure-designer/examples/jiangsu-imagegen/index.html#content-revision) · [内容、设计与实际提示词](product-brochure-designer/examples/jiangsu-imagegen/content-revision/brief.md)：用户反馈此前全生图作品过于华丽、缺少内容与设计后，回到原始六日提案，试做海报与线路总览两张关键页。海报建立三个两日章节的体验差异；内容页明确六天安排、两次换城、两组择一与五晚住宿。文字、图像与编排均由生图完成，保留一次实际排印修订。本轮尚未扩展为完整新手册。
+
+<img src="product-brochure-designer/examples/jiangsu-imagegen/content-revision/poster.png" alt="按三段行程组织的全生图海报" width="290"> <img src="product-brochure-designer/examples/jiangsu-imagegen/content-revision/route-overview.png" alt="六日线路、跨城、择一与住宿总览" width="290">
+
+[此前全生图样稿](product-brochure-designer/examples/jiangsu-imagegen/index.html#previous) · [此前四页 PDF](product-brochure-designer/examples/jiangsu-imagegen/brochure.pdf)：用户已反馈这一版过于华丽、内容与设计不足。原稿及提示词保留为对照，用于理解内容损失和装饰偏重的问题，不作为后续默认风格或质量基准。[当时制作记录](product-brochure-designer/examples/jiangsu-imagegen/brief.md)。
 
 <img src="product-brochure-designer/examples/jiangsu-imagegen/poster/poster.png" alt="全生图水岸江苏海报" width="290"> <img src="product-brochure-designer/examples/jiangsu-imagegen/pages/page-04.png" alt="全生图苏州阅读内页，左文右景" width="290">
 
@@ -48,7 +52,7 @@ Agent 从 [SKILL.md](product-brochure-designer/SKILL.md) 开始：
 
 1. 理解用途、读者、准确内容、素材、尺寸与交付格式。
 2. 选择单页／手册，并确定生图或 HTML 路线。
-3. 按任务读取相应参考，以视觉概念和关键页确定方向，再展开、查看和精修。
+3. 按读者任务编辑内容、表达信息关系，再以真实关键页检验视觉方向，展开与精修。
 4. 查看实际 PNG／PDF，核对内容、产品、字体、裁切与尺寸，再交付。
 
 可直接请求：

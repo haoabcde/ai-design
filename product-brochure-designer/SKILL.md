@@ -1,11 +1,11 @@
 ---
 name: product-brochure-designer
-description: Create static graphics with a visual concept, image generation/editing and precise layout, including posters, covers, promotional images and multi-page brochures. Use for art direction, composition, typography, visual refinement and PNG/PDF delivery. Brochures support whole-page image generation or HTML while preserving supplied copy, brand assets and facts. Does not cover interactive UI, video or 3D production.
+description: Design posters, covers, promotional graphics and brochures by editing supplied content, making its message and relationships visible, and developing an appropriate visual language. Supports whole-page image generation or HTML, with content preservation, readable typography and PNG/PDF delivery. Does not cover interactive UI, video or 3D production.
 ---
 
 # 平面设计与产品手册
 
-从内容形成视觉概念，用图像、排字与构图完成设计。生图与图像编辑是正式设计手段，也保留精确排版路线。首批支持**单页设计**和**产品手册**；手册可以整页生图，也可以用 HTML 排版。保留 `product-brochure-designer` 名称以兼容已有安装。
+先理解内容、编辑信息，再用排字、图像与构图表达主张、关系和气质。生图与图像编辑是正式设计手段，也保留精确排版路线。首批支持**单页设计**和**产品手册**；手册可以整页生图，也可以用 HTML 排版。保留 `product-brochure-designer` 名称以兼容已有安装。
 
 ## 1. 理解任务并选择流程
 
@@ -19,15 +19,17 @@ description: Create static graphics with a visual concept, image generation/edit
 
 不要把所有请求变成 A4，不强制单页设计填写 product.json，不为增加种类而额外引入流程。复杂信息图、完整品牌识别、摄影精修等若成为任务主体，使用相应专门工具与方法，明确本次可交付范围。
 
-## 2. 先形成视觉概念，再做版式
+## 2. 先编辑内容，再形成设计
 
-先找当前内容特有的形态、动作或材料，把它转成可见的构图关系。例如水岸旅行可以让一条水线组织标题与行程；仪器手册可以让精密剖面承担叙事。说清主视觉是什么、字与图如何相互作用，以及这个关系如何延续到内页。“高级感、大字、留白、卡片”不足以构成概念。
+先明确读者看完要理解、判断或完成什么，再从原资料中挑出支撑它的事实、差异、证据、步骤与条件。信息不足时补查有用的内容，不用空泛宣传语或风景铺满版面。海报突出一个成立的主张，手册按读者的问题组织页面；内容多不等于字数多，内容少也不必做满整本。
+
+把内容关系转成可见关系：先后顺序、可选方案、产品差异、部件对应、地点转换，应由分组、排字、图形、取景与阅读路径表达。视觉概念也可以来自材料或意象，但要说明它怎样强化这次内容。“水线串起三城”只有真正解释路线或阅读关系时才成立，不能靠水纹装饰替代线路信息。详见 [设计判断](references/design-system.md)。
 
 方向开放、首次建立视觉体系，或用户反馈“没有设计感”时，读 [视觉发想与修订](references/art-direction.md)。先做有实质差异的关键画面，比较实际成品，再确定方向；不要直接把机制模板填满。手册宜同时试封面和一页内容较密的内页，避免只有封面好看。
 
-HTML 手册还要建立完整的视觉语言：让字体、图像、色面、材质、层次与边角细节共同表达内容。学习参考时提炼它们之间的关系，再迁移到当前题材；不要收窄成选择固定皮肤。具体见 [HTML 编辑与视觉语言](references/html-editorial.md)。
+内容结构成立后，建立字体、图像、色彩、材料与细节的共同语言；它们承担解释、识别、吸引或情绪作用，按用途决定分量。学习参考时同时观察信息怎样组织、主张怎样成立和视觉怎样表达，不收窄成固定皮肤。HTML 细节见 [HTML 编辑与视觉语言](references/html-editorial.md)。
 
-整张／整页生图也要落实这些关系：把概念写成主体、文字、空间、光线与材料怎样相互作用，再给出准确文案。海报集中建立一个记忆点；手册同时建立跨页固定项与各页任务。首次建立多页体系时，宜先试真实内容较密的页面，确认文字读得清、视觉语言能延续，再展开；具体见 [生图设计](references/image-generation.md)。
+整张／整页生图的提示词先交代本页任务、准确内容与信息关系，再指定适合的视觉表达。首次建立多页体系时，宜先试真实内容页，检验读者能否找到答案、文字是否可读，再扩展全册；具体见 [生图设计](references/image-generation.md)。
 
 - 尊重已有品牌、用户参考和准确文案。不要按人群标签机械分配风格，也不要擅自压暗品牌色。
 - 信息少可以少做页数或用文字主导；信息多先编辑组织，不靠缩小字体塞满。
@@ -68,7 +70,7 @@ node scripts/image-workflow.mjs manifest --download-dir ./downloads --output ima
 
 **必须查看实际成品。** 用浏览器／设计工具渲染，等待字体与图片加载，核对画布边界、溢出、主体裁切、文字准确性和实际阅读尺寸。多页逐页看，再整体看一致性与节奏；改尺寸后重新检查内容重排。
 
-另做视觉复核：缩略图的焦点、题材特征、字图关系、跨页节奏是否支持原概念。指出并修正最影响画面的具体问题；若只是合规、整齐而缺乏辨识度，回到概念与构图重做。技术检查通过不等于设计质量通过，作者自评也不等于用户认可。
+回到原资料与读者任务复核：必要内容有没有在编辑时消失，先后、择一、差异与条件能否从画面中读懂。再看焦点、题材特征、字图关系与跨页节奏；既不能用装饰掩盖空内容，也不能把设计简化为增加文字或统一变素。修正最影响理解与表达的问题。技术检查通过不等于设计质量通过，作者自评也不等于用户认可。
 
 HTML 交付前运行：
 

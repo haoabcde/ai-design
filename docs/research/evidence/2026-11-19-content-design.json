@@ -1,0 +1,139 @@
+{
+  "date": "2026-11-19",
+  "baselineCommit": "0c9db568210960846edee3eade35143eceaa03b9",
+  "userFeedback": "感觉这个 skill 写出来的过于华丽而缺少内容，缺少设计",
+  "diagnosis": [
+    "主流程从形态、意象和材料开始，未充分约束内容编辑与关系表达",
+    "四页版保留少量游览描述，但未把原六日提案的总览、换城、择一与住宿组成整本可用的结构",
+    "上一轮仅校对输出已有文字，无法发现编辑时删除的必要信息",
+    "花枝、纸纹、屋檐与大字未充分服务页面任务；减装饰或加文字也不能单独解决设计问题"
+  ],
+  "changes": [
+    "入口和共享判断改为读者任务、内容编辑、信息关系、视觉表达",
+    "生图提示词优先说明准确内容与顺序、择一、对应等关系，再说明画面语言",
+    "多页指导按真实任务核对全书覆盖，海报区分核心主张与辅助信息",
+    "以前全生图成果明确标为被反馈的问题对照，保留历史图与提示词"
+  ],
+  "exampleRoot": "product-brochure-designer/examples/jiangsu-imagegen/content-revision",
+  "production": {
+    "tool": "built-in image_gen",
+    "calls": [
+      {
+        "output": "route-initial.png",
+        "prompt": "route-prompt.md",
+        "references": [],
+        "nativeFilename": "exec-991d970f-014b-4a12-89f6-1672af189b71.png",
+        "pixels": [
+          1055,
+          1491
+        ],
+        "sha256": "7231341fe964b6d4fdd1c66e37ceaa0a3853c08cb869c03ca67af6c18a2b9f87",
+        "unchangedNativeOutput": true
+      },
+      {
+        "output": "poster.png",
+        "prompt": "poster-prompt.md",
+        "references": [],
+        "nativeFilename": "exec-42bacfac-6790-407c-93d4-c58638037622.png",
+        "pixels": [
+          1086,
+          1448
+        ],
+        "sha256": "cb925ba8c2ba8053e4448bb52a242a29538abffa6583ca2d59a0b0f094aa4ad5",
+        "unchangedNativeOutput": true
+      },
+      {
+        "output": "route-overview.png",
+        "prompt": "route-refine-prompt.md",
+        "references": [
+          {
+            "path": "route-initial.png",
+            "role": "edit target; preserve copy, refine typography and hierarchy"
+          }
+        ],
+        "nativeFilename": "exec-586f6ca9-65b4-4d79-83d1-6cca13680136.png",
+        "pixels": [
+          1055,
+          1491
+        ],
+        "sha256": "1650eef5c72ebda7dd13d701d228b77d00b8ca0a2eb99ddbe6b53afacebeb6e3",
+        "unchangedNativeOutput": true
+      }
+    ],
+    "finalGraphics": [
+      "poster.png",
+      "route-overview.png"
+    ],
+    "fullNewBookletProduced": false,
+    "htmlRole": "original image viewer only",
+    "programmaticImageEdits": false,
+    "cliOrApiFallbackUsed": false
+  },
+  "sourceIntegrity": {
+    "source": "product-brochure-designer/examples/jiangsu-waterways/product.json",
+    "days": 6,
+    "cityOrder": [
+      "南京",
+      "扬州",
+      "苏州"
+    ],
+    "crossCityDays": [
+      3,
+      5
+    ],
+    "alternativeDays": [
+      2,
+      6
+    ],
+    "overnightsByDay": [
+      "南京",
+      "南京",
+      "扬州",
+      "扬州",
+      "苏州",
+      "返程"
+    ],
+    "stayAllocation": [
+      2,
+      2,
+      1
+    ],
+    "posterDays": [
+      "第1—2天",
+      "第3—4天",
+      "第5—6天"
+    ],
+    "automatedSourceComparison": "passed"
+  },
+  "visualReview": {
+    "bothFinalOriginalsInspected": true,
+    "routeQuestionsChecked": [
+      "六天怎样安排",
+      "哪两天跨城",
+      "哪两天是择一",
+      "五晚住在哪里",
+      "预约与接驳提示在哪里"
+    ],
+    "routeQuestionsAllAnswerableFromActualImage": true,
+    "posterCityDayExperienceAssociationsChecked": true,
+    "allCopyManuallyChecked": true,
+    "routeRefinement": "移除大色块和封闭底板，保持全部内容，以开放列对齐、细线及跨城强调精修",
+    "ocr": {
+      "completed": false,
+      "result": "Apple Vision invocation exited with Foundation._GenericObjCError.nilError; no OCR result was obtained; manual image check used"
+    },
+    "userAestheticAcceptance": "pending"
+  },
+  "validation": {
+    "skillQuickValidate": "passed",
+    "structuralSmokeChecksPassed": 30,
+    "gitDiffWhitespace": "passed",
+    "scriptsOrSchemasChanged": false
+  },
+  "limits": [
+    "本轮是两张关键页，不是完整手册重做",
+    "信息结构改善不等于用户已认可审美",
+    "1055×1491线路原图为固定栅格，未声称可编辑、响应式重排或达到高精度印刷要求",
+    "没有新增旅行政策、票务或班次事实；沿用项目原资料重新编辑"
+  ]
+}
