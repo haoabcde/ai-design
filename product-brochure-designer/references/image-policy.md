@@ -8,6 +8,14 @@
 
 `manifest` 只扫描下载目录的直接文件，按文件名稳定排序，生成相对清单位置的路径。它不判断图片内容、尺寸、用途或授权，初始角色为 `unassigned`；不覆盖已有清单，以免丢失人工审核信息。
 
+从 skill 目录生成待审核清单：
+
+```bash
+node scripts/image-workflow.mjs manifest --download-dir ./downloads --output images.json
+```
+
+清单初始为 `preview`，审核后填写 `sourceType`、`rights` 和相应来源信息。脚本不抓图，也不认定授权。
+
 ```json
 {
   "images": [{

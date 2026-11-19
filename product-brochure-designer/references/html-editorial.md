@@ -50,4 +50,4 @@
 
 同时检查窄屏阅读与打印结果。大字、内容完整、无溢出是交付基础，不能代替对作品气质的判断；已有认可的封面也不能自动证明所有内页获得认可。
 
-当前例子见 [水岸江苏内页对照](../examples/jiangsu-waterways/design/directions.html#reference-transfer)。用户认可的是既有水线版画方向；参考学习后的 HTML 修改单独展示，用于比较设计方法的迁移。
+实例见 [水岸江苏的 HTML 演进](../examples/jiangsu-waterways/design/directions.html)：参考思路迁移、日光与配色修订分别保存。用户认可了后续日光版；学习的是内容、排印、图像与空间的关系，不把该版本的配色和布局作为通用模板。

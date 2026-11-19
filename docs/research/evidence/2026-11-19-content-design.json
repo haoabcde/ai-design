@@ -122,7 +122,12 @@
       "completed": false,
       "result": "Apple Vision invocation exited with Foundation._GenericObjCError.nilError; no OCR result was obtained; manual image check used"
     },
-    "userAestheticAcceptance": "pending"
+    "userAestheticAcceptance": "User reported this version better than the preceding versions; continue refining this direction.",
+    "followUpFeedback": {
+      "date": "2026-11-19",
+      "verbatim": "感觉这版比之前几版要好",
+      "scope": "Comparative improvement of this version; no separate approval of every font, color, layout or other subject."
+    }
   },
   "validation": {
     "skillQuickValidate": "passed",
@@ -132,8 +137,44 @@
   },
   "limits": [
     "本轮是两张关键页，不是完整手册重做",
-    "信息结构改善不等于用户已认可审美",
+    "用户反馈为相较此前改善，不等于所有设计元素或其他题材均已验收。",
     "1055×1491线路原图为固定栅格，未声称可编辑、响应式重排或达到高精度印刷要求",
     "没有新增旅行政策、票务或班次事实；沿用项目原资料重新编辑"
-  ]
+  ],
+  "skillPolish": {
+    "date": "2026-11-19",
+    "baselineCommit": "920b14dccf8d9d289713445a6c04864667b93a9d",
+    "userRequest": "继续打磨一下skill",
+    "focus": [
+      "具体化构图、排印、图像取舍与跨页节奏判断",
+      "认可方向优先精修，区分相对好评与全部元素认可",
+      "精简重复说明，控制提示词冲突与案例过拟合",
+      "区分全生图与HTML机制，保留局部修改范围"
+    ],
+    "entryLines": {
+      "before": 90,
+      "after": 80
+    },
+    "imageGenerationGuideLines": {
+      "before": 111,
+      "after": 96
+    },
+    "manualInstructionWalkthrough": [
+      "单页宣传图：主张与主次，不强制产品JSON或手册流程",
+      "含精确参数的全生图手册：保留文案与产品身份，不静默切换HTML",
+      "HTML研学手册：观察线索、记录空间、较大正文与响应式机制",
+      "局部改字：保持已认可画面，定点编辑并复核整图"
+    ],
+    "walkthroughType": "Manual instruction review; not an independent model run or visual-quality evaluation.",
+    "newImagesGenerated": false,
+    "approvedExampleImagesUnchanged": true,
+    "checks": {
+      "skillQuickValidate": "passed",
+      "structuralSmokeChecksPassed": 30,
+      "localMarkdownLinkFiles": 15,
+      "brokenLocalLinks": 0,
+      "gitDiffWhitespace": "passed",
+      "scriptsSchemasTemplatesMetadataAndDependenciesUnchanged": true
+    }
+  }
 }

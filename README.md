@@ -15,7 +15,7 @@
 
 ## 已跑通的示例
 
-[江苏内容修订](product-brochure-designer/examples/jiangsu-imagegen/index.html#content-revision) · [内容、设计与实际提示词](product-brochure-designer/examples/jiangsu-imagegen/content-revision/brief.md)：用户反馈此前全生图作品过于华丽、缺少内容与设计后，回到原始六日提案，试做海报与线路总览两张关键页。海报建立三个两日章节的体验差异；内容页明确六天安排、两次换城、两组择一与五晚住宿。文字、图像与编排均由生图完成，保留一次实际排印修订。本轮尚未扩展为完整新手册。
+[江苏内容修订](product-brochure-designer/examples/jiangsu-imagegen/index.html#content-revision) · [内容、设计与实际提示词](product-brochure-designer/examples/jiangsu-imagegen/content-revision/brief.md)：用户反馈此前全生图作品过于华丽、缺少内容与设计后，回到原始六日提案，试做海报与线路总览两张关键页。海报建立三个两日章节的体验差异；内容页明确六天安排、两次换城、两组择一与五晚住宿。文字、图像与编排均由生图完成，保留一次实际排印修订。用户认为此版较此前更好，现沿此方向细化设计判断与制作指导；这组关键页尚未扩展为完整新手册。
 
 <img src="product-brochure-designer/examples/jiangsu-imagegen/content-revision/poster.png" alt="按三段行程组织的全生图海报" width="290"> <img src="product-brochure-designer/examples/jiangsu-imagegen/content-revision/route-overview.png" alt="六日线路、跨城、择一与住宿总览" width="290">
 
